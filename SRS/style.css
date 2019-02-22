@@ -22,3 +22,9 @@ ul li a{
 	padding: 15px;
 	font-size: 20px;
 }
+
+.sideBar{
+	text-decoration: none;
+	background-color: #E06638;
+	width: 28px;
+}
