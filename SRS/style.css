@@ -3,7 +3,11 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  vertical-align: middle;
+}
+
+.mainBody {
+	float: left;
+	width: 70%;
 }
 
 ul{
@@ -25,6 +29,25 @@ ul li a{
 
 .sideBar{
 	text-decoration: none;
-	background-color: #E06638;
-	width: 28px;
+	background-color: #FF7A68;
+	width: auto;
+	float: left;
+	margin-top: 270px
+}
+
+h2 {
+
+}
+
+h3 {
+	
+}
+
+p {
+	text-align: left;
+	border: 10px solid none;
+	border-radius: 100px;
+	padding: 10px;
+	background-color: #FFE7E4;
+	margin: auto;
 }
