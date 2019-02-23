@@ -57,9 +57,5 @@ h3 {
 
 p {
 	text-align: left;
-	border: 10px solid none;
-	border-radius: 7px;
-	padding: 10px;
-	background-color: ;
-	margin: 2px;
+	margin: auto;
 }
