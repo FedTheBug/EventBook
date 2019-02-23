@@ -17,7 +17,7 @@ ul{
 ul li a{
 	text-decoration: none;
 	text-align: center;
-	background-color: #38D5E0;
+	background-color: #9B59B6;
 	color: black;
 	display: inline-block;
 	width: 400px;
@@ -29,25 +29,37 @@ ul li a{
 
 .sideBar{
 	text-decoration: none;
-	background-color: #FF7A68;
+	background-color: #5499C7;
 	width: auto;
 	float: left;
-	margin-top: 270px
+	margin-top: 170px
+
 }
 
 h2 {
+	text-align: left;
+	border: 10px solid none;
+	padding: 10px;
+	background-color: #D7BDE2;
+	margin: 1px;
+	border-radius: 7px;
 
 }
 
 h3 {
-	
+	text-align: left;
+	border: 10px solid none;
+	padding: 10px;
+	background-color: #D4E6F1;
+	margin: 1px;
+	border-radius: 7px;
 }
 
 p {
 	text-align: left;
 	border: 10px solid none;
-	border-radius: 5px;
+	border-radius: 7px;
 	padding: 10px;
-	background-color: #FFE7E4;
-	margin: auto;
+	background-color: ;
+	margin: 2px;
 }
