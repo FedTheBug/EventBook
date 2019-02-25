@@ -8,14 +8,14 @@
 	<body class="center">
 		<img src="image/eventbook.jpg" alt="logo">
 		<div class="sideBar">
-		
+
 	        <ul>
 	          <h3 style="text-align:center;">Software Design Specifications (SDS)</h3>
 	          <li><a href="introduction.html">1. Introduction</a></li>
 	          <li><a href="architecturalPattern.html">2. Architectural Pattern</a></li>
 	          <li><a href="classDesign.html">3. Class Design</a></li>
 	          <li><a href="databaseSchema.html">4. Database Schema</a></li>
-	          <li><a href="userInterfaceDesign.html">5. User Interface Design</a></li> 
+	          <li><a href="userInterfaceDesign.html">5. User Interface Design</a></li>
 	        </ul>
 	        <a href="">
 	        	View, Download & Print pdf Version
@@ -24,28 +24,28 @@
 		<div class="mainBody">
 			<h2>4. Database Schema</h2><br>
         	<h3>4.1	E-R Diagram</h3><br>
-				<p></p><br>
+				<p><img src="image/ERD.png" width= "900" height="720" alt="ER-Diagram"></p><br>
 			<h3>4.2	Database Description</h3><br>
-        		<p> <p>User: 
+        		<p> <p>User:
 							The attributes of this class is: userID(PK), userName, email, password, Sex,birthdate,address.</p><br>
-							
+
 							<p>Organizers:
 							The attributes of this class is: userName(from User Class-FK), organizerID(PK), organizerName.</p><br>
-							
-							<p>Events: 
-							The attributes of this class is: 
+
+							<p>Events:
+							The attributes of this class is:
 							eventID(PK), organizerID(from Organizer class-FK), userName(from User Class-FK), eventName, eventCreatedTime, eventDate,eventPlace, eventCategory, eventDiscription.</p><br>
-							
-							<p>Query: 
-							The attributes of this class is: 
-							organizerID(from Organizer class-FK), userName(from User Class-FK),eventID(from Event class-FK), queryID(PK), queryQuestion, queryAnswers, queryTime, question, answer.</p><br>  
-							
+
+							<p>Query:
+							The attributes of this class is:
+							organizerID(from Organizer class-FK), userName(from User Class-FK),eventID(from Event class-FK), queryID(PK), queryQuestion, queryAnswers, queryTime, question, answer.</p><br>
+
 							<p>Participants:
-							 The attribute of this class is : 
+							 The attribute of this class is :
 							userID(from user class-FK), eventID(from event class- FK).
 							</p><br>
        		</div>
-	        
+
 	</body>
 
 </html>
