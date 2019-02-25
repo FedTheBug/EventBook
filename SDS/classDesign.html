@@ -28,22 +28,22 @@
 				  <img src="image/classDiagram.PNG" alt="classDiagram">
 			    </center>
 			<h3>3.2	Class Details</h3><br>
-        <p> <p>User: This class will contain all the necessary information about an user after the registration and the stored data will be cross-checked during log in.
+        <p> <p> <b>User:</b> This class will contain all the necessary information about an user after the registration and the stored data will be cross-checked during log in.
 					The attributes of this class is: userID, userName, email, password, gender, birthdate, address.</p><br>
 				 
-				 <p>Organizers:User can create a group of users or can act alone to host an event.Organizing team can give update about the event as well as change the event details.
+				 <p> <b>Organizers:</b> User can create a group of users or can act alone to host an event.Organizing team can give update about the event as well as change the event details.
 				 The attributes of this class is: userName(from User Class), organizerID, organizerName.</p><br>
 				 
-				 <p>Events: Organizers host events and participants can participate in the events.The category of the event is also inherited in this class. 
+				 <p> <b>Events:</b> Organizers host events and participants can participate in the events.The category of the event is also inherited in this class. 
 				 The attributes of this class is: organizerID(from Organizer class), userName(from User Class), eventName, eventCreatedTime, eventDate,eventPlace, eventCategory, eventDiscription, eventID.</p><br>
 				 
-				 <p>Query: Event related questions are asked here by the participants and the organizers see to those queries.
+				 <p> <b>Query:</b> Event related questions are asked here by the participants and the organizers see to those queries.
 				 The attributes of this class is: organizerID(from Organizer class), userName(from User Class),eventID(from Event class), queryID, queryQuestion, queryAnswers, queryTime.</p><br>
 				 
-				 <p>Update: Organizers can update event informations if needed. If organizers needed to change event place or time or anything else, they can.
+				 <p> <b>Update:</b> Organizers can update event informations if needed. If organizers needed to change event place or time or anything else, they can.
 				 The attributes of this class is: organizerID(from Organizer class), eventName, eventCreatedTime, eventDate,eventPlace, eventCategory, eventDiscription, eventID.</p><br>
 				 
-				 <p>Admin: Admin creates category table where the events get sorted according to their given category determined by the user.
+				 <p> <b>Admin:</b> Admin creates category table where the events get sorted according to their given category determined by the user.
 				 </p><br>
        		
 		</div>
