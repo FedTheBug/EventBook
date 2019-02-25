@@ -26,7 +26,24 @@
         	<h3>4.1	E-R Diagram</h3><br>
 				<p></p><br>
 			<h3>4.2	Database Description</h3><br>
-        		<p></p>
+        		<p> <p>User: 
+							The attributes of this class is: userID(PK), userName, email, password, Sex,birthdate,address.</p><br>
+							
+							<p>Organizers:
+							The attributes of this class is: userName(from User Class-FK), organizerID(PK), organizerName.</p><br>
+							
+							<p>Events: 
+							The attributes of this class is: 
+							eventID(PK), organizerID(from Organizer class-FK), userName(from User Class-FK), eventName, eventCreatedTime, eventDate,eventPlace, eventCategory, eventDiscription.</p><br>
+							
+							<p>Query: 
+							The attributes of this class is: 
+							organizerID(from Organizer class-FK), userName(from User Class-FK),eventID(from Event class-FK), queryID(PK), queryQuestion, queryAnswers, queryTime, question, answer.</p><br>  
+							
+							<p>Participants:
+							 The attribute of this class is : 
+							userID(from user class-FK), eventID(from event class- FK).
+							</p><br>
        		</div>
 	        
 	</body>
