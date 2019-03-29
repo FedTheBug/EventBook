@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//to make a route to index/home
+Route::get('/', 'PagesController@index');
+
+//to make a route to about
+Route::get('/about', 'PagesController@about');
+
+//to make a route to services
+Route::get('/services', 'PagesController@services');
