@@ -61,7 +61,7 @@ class EventsController extends Controller
         $event->description = $request->input('description');
         $event->event_date = $request->input('event_date');
         $event->reg_deadline = $request->input('reg_deadline');
-        $event->description = $request ->input('reg_deadline');
+        $event->description = $request ->input('description');
         $event->save();
 
         return redirect('/events')->with('succes','Event Created');
