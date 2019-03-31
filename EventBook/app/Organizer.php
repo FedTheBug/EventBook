@@ -5,7 +5,8 @@
 | Modle Class
 |--------------------------------------------------------------------------
 |
-| Model Class for Organizer
+| Model Class for Organizer.
+| Only Organizer can organize Event.
 |
 */
 
