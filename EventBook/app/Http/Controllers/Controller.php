@@ -1,5 +1,17 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Controller Class
+|--------------------------------------------------------------------------
+|
+| Control:
+|   Requests
+|   Response
+|   CRUD operation
+|
+*/
+
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
