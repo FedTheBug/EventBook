@@ -10,8 +10,8 @@
            
            {!! Form::open(['action'=> 'EventsController@store', 'method'=>'POST']) !!}
                <div class="form-group">
-                   {{ Form::label('name','Name')}}
-                   {{ Form::text('name', '',['class'=>'form-control', 'placeholder'=>'Event Name'])}}
+                       {{ Form::label('name','Name')}}
+                       {{ Form::text('name', '',['class'=>'form-control', 'placeholder'=>'Event Name'])}}
                </div>
                <div class="form-group">
                        {{ Form::label('venue','Venue')}}
@@ -28,9 +28,7 @@
                <div class="form-group">
                        {{ Form::label('description','Description')}}
                        {{ Form::textarea('description', '',['class'=>'form-control', 'placeholder'=>'Write a description'])}}
-               </div>
-               
-                     
+               </div>      
               
                {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }}
            {!! Form::close() !!}
