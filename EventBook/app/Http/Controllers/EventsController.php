@@ -114,7 +114,7 @@ class EventsController extends Controller
     {
         $event = Event::find($id);
         $event->delete();
-        return redirect('/home')->with('success', 'Competition Removed!');
+        return redirect('/home')->with('success', 'Event Removed!');
     
     }
 }
