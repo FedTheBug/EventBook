@@ -13,6 +13,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use App\User;
+use App\Organizer;
+use App\Participant;
 use DB;
 
 class EventsController extends Controller
