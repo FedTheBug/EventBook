@@ -10,6 +10,7 @@
 
 namespace App\Http\Controllers;
 
+//using Models in this class
 use Illuminate\Http\Request;
 use App\Event;
 use App\User;

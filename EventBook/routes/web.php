@@ -22,8 +22,9 @@ Route::get('/services', 'PagesController@services');
 
 // to make route to auth
 Auth::routes();
+
 //to make route to event class
 Route::resource('events','EventsController');
+
 //
 Route::get('/home', 'HomeController@index')->name('home');
-
