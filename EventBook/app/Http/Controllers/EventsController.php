@@ -27,7 +27,7 @@ class EventsController extends Controller
      */
     public function index()
     { //$events =Event::all()
-        $events= Event::orderBy('id','asc')->get();
+        $events= Event::orderBy('event_date','asc')->get();
         return view('events.index')->with('events',$events);
 
     }
@@ -79,6 +79,7 @@ class EventsController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
+        
         return view('events.show')->with('event',$event);
     }
 
