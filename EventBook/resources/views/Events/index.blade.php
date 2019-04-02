@@ -8,7 +8,7 @@
     @foreach($events as $event)
         <div class= 'well' >
             <h3><a href ="/events/{{$event->id}}">{{$event->name}}</a></h3>
-            <small>Deadline: {{$event->reg_deadline}}</small>
+            <small>Event Date: {{$event->event_date}}</small>
             <hr>
         </div>
     @endforeach
