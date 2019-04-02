@@ -7,9 +7,9 @@
     @if(count($events)>0)
     @foreach($events as $event)
         <div class= 'well' >
-        <h3><a href ="/events/{{$event->id}}">{{$event->name}}</a></h3>
-        <small>Deadline: {{$event->reg_deadline}}</small>
-        <hr>
+            <h3><a href ="/events/{{$event->id}}">{{$event->name}}</a></h3>
+            <small>Deadline: {{$event->reg_deadline}}</small>
+            <hr>
         </div>
     @endforeach
     @else 
