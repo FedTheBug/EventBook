@@ -11,7 +11,7 @@
 |
 */
 
-//to make a route to index/home
+//to make a route to home
 Route::get('/', 'PagesController@index');
 
 //to make a route to about
