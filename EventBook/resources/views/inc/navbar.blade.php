@@ -27,8 +27,10 @@
                 <li class="nav-item">
                         <a class="nav-link" href="/events">Events</a>
                 </li>
+<!--
                 <li class="nav-item">
                     <a class="nav-link" href="/events/create">Create Events</a>
+-->
             </li>
             
               </ul>
