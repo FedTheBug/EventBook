@@ -12,6 +12,7 @@
             <hr>
         </div>
     @endforeach
+    {{$events->links()}}
     @else 
         <p>No Events Found</p>
     @endif
