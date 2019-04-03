@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <h3>You are logged in!</h3>
+                    <div class  = "panel-body">
+                        <a href="/events/create" class = "btn btn-primary">Create Event</a>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
