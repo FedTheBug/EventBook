@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration
             $table->date('event_date');
             $table->date('reg_deadline');
             $table->mediumText('description');
-            $table->integer('user_id')->nullable();
+            //$table->integer('user_id')->nullable();
             
             
             $table->timestamps();
