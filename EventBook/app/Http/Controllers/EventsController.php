@@ -55,6 +55,7 @@ class EventsController extends Controller
             'venue' => 'required',
             'event_date' => 'required',
             'reg_deadline' => 'required',
+            'event_type' => 'required',
             'description' => 'required',
             ]);
 
