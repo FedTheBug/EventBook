@@ -8,7 +8,7 @@
         <div class="card-body">
            <a href="/events" class="btn btn-info"> Go Back </a>
            
-           {!! Form::open(['action'=> 'EventsController@store', 'method'=>'POST']) !!}
+           {!! Form::open(['action'=> ['EventsController@update', $event->id], 'method'=>'POST']) !!}
                <div class="form-group">
                        {{ Form::label('name','Name')}}
                        {{ Form::text('name', '',['class'=>'form-control', 'placeholder'=>'Event Name'])}}
@@ -33,7 +33,7 @@
                        {{ Form::label('description','Description')}}
                        {{ Form::textarea('description', '',['class'=>'form-control', 'placeholder'=>'Write a description'])}}
                </div>
-              
+               
                {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }}
            {!! Form::close() !!}
         </div>
