@@ -69,7 +69,7 @@ class EventsController extends Controller
             $event->description = $request ->input('description');
             $event->save();
 
-        return redirect('/events')->with('succes','Event Created');
+        return redirect('/events')->with('succes','Event Created!');
     }
 
     /**
