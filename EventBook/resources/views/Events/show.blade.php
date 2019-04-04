@@ -10,6 +10,7 @@
         Venue: {{ $event->venue }} <br>
         Event Date: {{ $event->event_date }} <br>
         <b> Registration Deadline: {{ $event->reg_deadline}} </b><br><br> 
+        Event Type: {{$event->event_type}}
         Description: {{ $event->description}}
         <hr>
         {!!Form::open(['action' => ['EventsController@destroy',$event->id],
