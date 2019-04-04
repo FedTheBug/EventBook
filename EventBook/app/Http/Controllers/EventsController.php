@@ -58,6 +58,7 @@ class EventsController extends Controller
             'description' => 'required',
             ]);
 
+            //Create Event
             $event = new event;
             $event->name = $request->input('name');
             $event->venue = $request->input('venue');
