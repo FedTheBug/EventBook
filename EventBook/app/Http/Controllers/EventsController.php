@@ -115,7 +115,7 @@ class EventsController extends Controller
             ]);
 
             //Create Event
-            $event = Post::find($id);
+            $event = Event::find($id);
             $event->name = $request->input('name');
             $event->venue = $request->input('venue');
             $event->description = $request->input('description');
