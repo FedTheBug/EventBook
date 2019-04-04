@@ -11,7 +11,7 @@
            {!! Form::open(['action'=> ['EventsController@update', $event->id], 'method'=>'POST']) !!}
                <div class="form-group">
                        {{ Form::label('name','Name')}}
-                       {{ Form::text('name', '',['class'=>'form-control', 'placeholder'=>'Event Name'])}}
+                       {{ Form::text('name', $event->name,['class'=>'form-control', 'placeholder'=>'Event Name'])}}
                </div>
                <div class="form-group">
                        {{ Form::label('venue','Venue')}}
