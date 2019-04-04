@@ -33,7 +33,7 @@
                        {{ Form::label('description','Description')}}
                        {{ Form::textarea('description', '',['class'=>'form-control', 'placeholder'=>'Write a description'])}}
                </div>
-               
+               {{Form::hidden('_method','PUT')}}
                {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }}
            {!! Form::close() !!}
         </div>
