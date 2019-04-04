@@ -13,6 +13,8 @@
         Event Type: {{$event->event_type}}<br>
         Description: {{ $event->description}}
         <hr>
+        <a href="/events/{{$event->id}}/edit" class="btn btn-default">Edit</a>
+        
         {!!Form::open(['action' => ['EventsController@destroy',$event->id],
         'method' => 'POST', 'class' => 'float-right'])!!}
                 {{Form::hidden('_method','DELETE')}}
