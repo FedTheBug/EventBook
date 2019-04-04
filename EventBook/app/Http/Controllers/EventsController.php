@@ -138,6 +138,6 @@ class EventsController extends Controller
     {
         $event = Event::find($id);
         $event->delete();
-        return redirect('/')->with('success', 'Event Removed!');
+        return redirect('/events')->with('success', 'Event Removed!');
     }
 }
