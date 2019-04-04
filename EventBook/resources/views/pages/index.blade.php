@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class ="jumbotron text-center">
+<div class ="text-center">
     <body>
         <h1>Welcome to Eventbook</h1>
         <p>This is the largest platform for upcoming events.Book your events now</p>
