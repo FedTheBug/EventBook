@@ -13,7 +13,7 @@
         Event Type: {{$event->event_type}}<br>
         Description: {{ $event->description}}
         <hr>
-        <a href="/event/{{$event->id}}/edit" class="btn btn-default">Edit</a>
+        <a href="/events/{{$event->id}}/edit" class="btn btn-default">Edit</a>
 
         {!!Form::open(['action' => ['EventsController@destroy',$event->id],
         'method' => 'POST', 'class' => 'float-right'])!!}
