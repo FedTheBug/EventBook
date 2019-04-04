@@ -3,7 +3,7 @@
 @section('content')
 
  <div class="card">
-        <div class="card-header"><h1>Edit Event</h1></div>
+        <div class="card-header"><h1 align="center">Edit Event</h1></div>
        
         <div class="card-body">
            <a href="/events" class="btn btn-info"> Go Back </a>
