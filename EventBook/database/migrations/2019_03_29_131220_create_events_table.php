@@ -19,6 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('venue');
             $table->date('event_date');
             $table->date('reg_deadline');
+            $table->mediumText('event_type');
             $table->mediumText('description');
             $table->integer('user_id')->nullable();
             $table->timestamps();
