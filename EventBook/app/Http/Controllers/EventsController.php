@@ -50,7 +50,7 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-             $this->validate($request,[
+            $this->validate($request,[
             'name' => 'required',
             'venue' => 'required',
             'event_date' => 'required',
@@ -105,7 +105,27 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'venue' => 'required',
+            'event_date' => 'required',
+            'reg_deadline' => 'required',
+            'event_type' => 'required',
+            'description' => 'required',
+            ]);
+
+            //Create Event
+            $event = Post::find($id);
+            $event->name = $request->input('name');
+            $event->venue = $request->input('venue');
+            $event->description = $request->input('description');
+            $event->event_date = $request->input('event_date');
+            $event->reg_deadline = $request->input('reg_deadline');
+            $event->description = $request ->input('description');
+            $event->save();
+
+        return redirect('/events')->with('succes','Event Created!');
+
     }
 
     /**
