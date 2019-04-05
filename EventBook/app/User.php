@@ -1,5 +1,14 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Modle Class
+|--------------------------------------------------------------------------
+|
+| Model Class for User
+|
+*/
+
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
@@ -38,6 +47,6 @@ class User extends Authenticatable
     ];
 
     public function events(){
-        
+
     }
 }
