@@ -26,5 +26,5 @@ Route::resource('events','EventsController');
 // to make route to auth
 Auth::routes();
 
-//
-Route::get('/home', 'HomeController@index')->name('home');
+//route to home after logged in
+Route::get('/home', 'HomeController@index');
