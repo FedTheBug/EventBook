@@ -28,7 +28,3 @@ Auth::routes();
 
 //route to home after logged in
 Route::get('/home', 'HomeController@index');
-
-//to make a route to google api
-Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');

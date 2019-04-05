@@ -66,8 +66,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
-
-                                <a href={{url('auth/google')}} class="btn btn-success">Register with Google</a>
                             </div>
                         </div>
                     </form>
