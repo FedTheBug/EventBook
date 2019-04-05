@@ -40,7 +40,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    //
+    //Google API Provider
     public function redirectToProvider($provider)
     {
         return Socialite::driver($provider)->redirect();
