@@ -46,6 +46,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * User can have multiple event.
+     */
     public function events(){
         return $this->hasMany('App\Event');
     }
