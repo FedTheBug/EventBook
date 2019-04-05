@@ -3,10 +3,11 @@
 @section('content')
 
  <div class="card">
-        <div class="card-header"><h1>Create an Event</h1></div>
+        <div class="card-header"><h1 align="center">Create an Event</h1></div>
        
         <div class="card-body">
            <a href="/events" class="btn btn-info"> Go Back </a>
+           <hr>
            
            {!! Form::open(['action'=> 'EventsController@store', 'method'=>'POST']) !!}
                <div class="form-group">
@@ -26,9 +27,13 @@
                        {{ Form::date('reg_deadline', '',['class'=>'form-control'])}}
                </div>
                <div class="form-group">
+                        {{ Form::label('event_type','Event Type')}}
+                        {{ Form::text('event_type', '',['class'=>'form-control', 'placeholder'=>'Event Type'])}}
+                </div>
+               <div class="form-group">
                        {{ Form::label('description','Description')}}
-                       {{ Form::textarea('description', '',['class'=>'form-control', 'placeholder'=>'Write a description'])}}
-               </div>      
+                       {{ Form::textarea('description', '', ['class'=> 'form-control', 'placeholder' => 'Write a description'])}}
+               </div>
               
                {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }}
            {!! Form::close() !!}

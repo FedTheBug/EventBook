@@ -50,14 +50,16 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-             $this->validate($request,[
+            $this->validate($request,[
             'name' => 'required',
             'venue' => 'required',
             'event_date' => 'required',
             'reg_deadline' => 'required',
+            'event_type' => 'required',
             'description' => 'required',
             ]);
 
+            //Create Event
             $event = new event;
             $event->name = $request->input('name');
             $event->venue = $request->input('venue');
@@ -65,9 +67,10 @@ class EventsController extends Controller
             $event->event_date = $request->input('event_date');
             $event->reg_deadline = $request->input('reg_deadline');
             $event->description = $request ->input('description');
+            $event->organizer_id = auth()->user()->id;
             $event->save();
 
-        return redirect('/events')->with('succes','Event Created');
+        return redirect('/events')->with('success','Event Created!');
     }
 
     /**
@@ -79,7 +82,6 @@ class EventsController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
-        
         return view('events.show')->with('event',$event);
     }
 
@@ -91,7 +93,8 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = Event::find($id);
+        return view('events.edit')->with('event',$event);
     }
 
     /**
@@ -103,7 +106,27 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'venue' => 'required',
+            'event_date' => 'required',
+            'reg_deadline' => 'required',
+            'event_type' => 'required',
+            'description' => 'required',
+            ]);
+
+            //Create Event
+            $event = Event::find($id);
+            $event->name = $request->input('name');
+            $event->venue = $request->input('venue');
+            $event->description = $request->input('description');
+            $event->event_date = $request->input('event_date');
+            $event->reg_deadline = $request->input('reg_deadline');
+            $event->description = $request ->input('description');
+            $event->save();
+
+        return redirect('/events')->with('succes','Event Updated!');
+
     }
 
     /**
@@ -116,6 +139,6 @@ class EventsController extends Controller
     {
         $event = Event::find($id);
         $event->delete();
-        return redirect('/')->with('success', 'Event Removed!');
+        return redirect('/events')->with('success', 'Event Removed!');
     }
 }

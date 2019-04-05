@@ -20,11 +20,11 @@ Route::get('/about', 'PagesController@about');
 //to make a route to services
 Route::get('/services', 'PagesController@services');
 
-// to make route to auth
-Auth::routes();
-
 //to make route to event class
 Route::resource('events','EventsController');
 
-//
-Route::get('/home', 'HomeController@index')->name('home');
+// to make route to auth
+Auth::routes();
+
+//route to home after logged in
+Route::get('/home', 'HomeController@index');

@@ -13,8 +13,8 @@ class AddOrganizerIdToEvent extends Migration
      */
     public function up()
     {
-        Schema::table('event', function (Blueprint $table) {
-           // $table->integer('organizer_id')->nullable();
+        Schema::table('events', function (Blueprint $table) {
+            $table->integer('organizer_id');
         });
     }
 
@@ -25,8 +25,8 @@ class AddOrganizerIdToEvent extends Migration
      */
     public function down()
     {
-        Schema::table('event', function (Blueprint $table) {
-           // $table->dropColumn('organizer_id')->nullable();
+        Schema::table('events', function (Blueprint $table) {
+            $table->dropColoum('organizer_id');
         });
     }
 }

@@ -1,5 +1,14 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Modle Class
+|--------------------------------------------------------------------------
+|
+| Model Class for User
+|
+*/
+
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
@@ -36,4 +45,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * User can have multiple event.
+     */
+    public function events(){
+        return $this->hasMany('App\Event');
+    }
 }

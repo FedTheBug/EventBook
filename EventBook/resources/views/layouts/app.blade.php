@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -23,11 +20,21 @@
     <div id="app">
        @include('inc.navbar')
        <div class = "container">
-           @include('inc.messages')
-        @yield('constant')
-        <main class="py-4">
-            @yield('content')
-        </main>
+            @include('inc.messages')
+            @yield('constant')
+            <main class="py-4">
+                @yield('content')
+            </main>
+        </div>
     </div>
+    
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- ckeditor -->
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
+
 </body>
 </html>

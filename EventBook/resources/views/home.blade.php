@@ -5,7 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header" style="background-color:lightblue" align="center">
+                        <font size="+2">Dashboard</font>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,12 +15,16 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h3>You are logged in!</h3>
-                    <div class  = "panel-body">
+                    <h5>You are logged in!</h5>
+                    <div class="text-center">
+                        <hr>
                         <a href="/events/create" class = "btn btn-primary">Create Event</a>
                     </div>
-                    
-                    
+                    <div>
+                        <hr>
+                        <h5 >Your Events:</h5>
+
+                    </div>
                 </div>
             </div>
         </div>
