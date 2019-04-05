@@ -44,7 +44,7 @@ return [
         ],
     ],
 
-    //
+    //credentials for the OAuth services
     'google' => [
         'client_id' => env('GOOGLE_ID'),
         'client_secret' => env('GOOGLE_SECRET'),
