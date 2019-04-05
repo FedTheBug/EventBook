@@ -28,3 +28,7 @@ Auth::routes();
 
 //route to home after logged in
 Route::get('/home', 'HomeController@index');
+
+//
+Route::get('/login/{social}', 'Auth\LoginController@socialLogin')->where('social', 'twitter|facebook|linkedin|google|github');
+Route::get('/login/{social}/callback', 'Auth\LoginController@handleProviderCallback')->where('social', 'twitter|facebook|linkedin|google|github');
