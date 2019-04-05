@@ -26,7 +26,7 @@ class AddOrganizerIdToEvent extends Migration
     public function down()
     {
         Schema::table('events', function (Blueprint $table) {
-            //
+            $table->dropColoum('organizer_id');
         });
     }
 }
