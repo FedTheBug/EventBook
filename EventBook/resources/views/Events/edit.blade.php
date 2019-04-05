@@ -7,6 +7,7 @@
        
         <div class="card-body">
            <a href="/events" class="btn btn-info"> Go Back </a>
+           <hr>
            
            {!! Form::open(['action'=> ['EventsController@update', $event->id], 'method'=>'POST']) !!}
                <div class="form-group">
