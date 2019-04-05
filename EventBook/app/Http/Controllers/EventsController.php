@@ -55,7 +55,7 @@ class EventsController extends Controller
             'venue' => 'required',
             'event_date' => 'required',
             'reg_deadline' => 'required',
-            'event_type' => 'required',
+        //    'event_type' => 'required',
             'description' => 'required',
             ]);
 
@@ -66,6 +66,7 @@ class EventsController extends Controller
             $event->description = $request->input('description');
             $event->event_date = $request->input('event_date');
             $event->reg_deadline = $request->input('reg_deadline');
+        //    $event->event_type = $request ->input('event_type');
             $event->description = $request ->input('description');
             $event->organizer_id = auth()->user()->id;
             $event->save();
@@ -111,7 +112,7 @@ class EventsController extends Controller
             'venue' => 'required',
             'event_date' => 'required',
             'reg_deadline' => 'required',
-            'event_type' => 'required',
+        //    'event_type' => 'required',
             'description' => 'required',
             ]);
 
@@ -122,6 +123,7 @@ class EventsController extends Controller
             $event->description = $request->input('description');
             $event->event_date = $request->input('event_date');
             $event->reg_deadline = $request->input('reg_deadline');
+        //    $event->event_type = $request ->input('event_type');
             $event->description = $request ->input('description');
             $event->save();
 
