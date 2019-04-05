@@ -19,8 +19,10 @@
                     <div class="text-right">
                         <a href="/events/create" class = "btn btn-primary">Create Event</a>
                     </div>
-                    
-                    
+                    <div>
+                        <h5>Your Events:</h5>
+                        <hr>
+                    </div>
                 </div>
             </div>
         </div>

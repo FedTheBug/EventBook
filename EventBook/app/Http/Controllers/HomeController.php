@@ -23,8 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $organizer_id = auth()->user('id');
-        $user = User::find($organizer_id);
-        return view('home')->with('events', $user->posts);
+        return view('home');
     }
 }
