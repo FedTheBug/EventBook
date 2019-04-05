@@ -15,6 +15,10 @@
                 </ul>
 
                 <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/events">Events</a>
+                </li>
 <!--
                 <li>
                   <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
@@ -26,9 +30,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/services">Services</a>
                 </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="/events">Events</a>
-                </li>
+
 <!--
                 <li class="nav-item">
                     <a class="nav-link" href="/events/create">Create Events</a>
