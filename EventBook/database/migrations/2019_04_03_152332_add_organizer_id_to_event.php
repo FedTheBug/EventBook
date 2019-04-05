@@ -13,7 +13,7 @@ class AddOrganizerIdToEvent extends Migration
      */
     public function up()
     {
-        Schema::table('event', function (Blueprint $table) {
+        Schema::table('events', function (Blueprint $table) {
             //
         });
     }
@@ -25,7 +25,7 @@ class AddOrganizerIdToEvent extends Migration
      */
     public function down()
     {
-        Schema::table('event', function (Blueprint $table) {
+        Schema::table('events', function (Blueprint $table) {
             //
         });
     }
