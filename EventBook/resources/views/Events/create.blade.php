@@ -26,10 +26,12 @@
                        {{ Form::label('reg_deadline','Registration Deadline')}}
                        {{ Form::date('reg_deadline', '',['class'=>'form-control'])}}
                </div>
+<!--
                <div class="form-group">
                         {{ Form::label('event_type','Event Type')}}
                         {{ Form::text('event_type', '',['class'=>'form-control', 'placeholder'=>'Event Type'])}}
                 </div>
+-->
                <div class="form-group">
                        {{ Form::label('description','Description')}}
                        {{ Form::textarea('description', '', ['class'=> 'form-control', 'placeholder' => 'Write a description'])}}
