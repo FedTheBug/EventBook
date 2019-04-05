@@ -30,8 +30,8 @@
 <!--
                 <li class="nav-item">
                     <a class="nav-link" href="/events/create">Create Events</a>
+                </li>
 -->
-            </li>
             
               </ul>
 
