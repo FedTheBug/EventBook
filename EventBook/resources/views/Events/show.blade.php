@@ -10,7 +10,7 @@
         Venue: {{ $event->venue }} <br>
         Event Date: {{ $event->event_date }} <br>
         <b> Registration Deadline: {{ $event->reg_deadline}} </b><br> 
-        Event Type: {{$event->event_type}}<br>
+   <!--     Event Type: {{$event->event_type}}<br> -->
         Description: {{ $event->description}}
         <hr>
         <a href="/events/{{$event->id}}/edit" class="btn btn-success">Edit</a>
