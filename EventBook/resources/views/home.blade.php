@@ -16,7 +16,7 @@
                         </div>
                     @endif
                     <h5>You are logged in!</h5>
-                    <div class  = "panel-body">
+                    <div class="text-right">
                         <a href="/events/create" class = "btn btn-primary">Create Event</a>
                     </div>
                     
