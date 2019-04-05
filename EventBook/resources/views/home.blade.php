@@ -16,12 +16,14 @@
                         </div>
                     @endif
                     <h5>You are logged in!</h5>
-                    <div class="text-right">
+                    <div class="text-center">
+                        <hr>
                         <a href="/events/create" class = "btn btn-primary">Create Event</a>
                     </div>
                     <div>
-                        <h5>Your Events:</h5>
                         <hr>
+                        <h5 >Your Events:</h5>
+
                     </div>
                 </div>
             </div>
