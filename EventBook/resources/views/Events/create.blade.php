@@ -36,9 +36,11 @@
                        {{ Form::label('description','Description')}}
                        {{ Form::textarea('description', '', ['class'=> 'form-control', 'placeholder' => 'Write a description'])}}
                </div>
-              
-               {{ Form::submit('Submit', ['class'=>'btn btn-success']) }}
-           {!! Form::close() !!}
+               
+               <div class="text-right">
+                       {{ Form::submit('Submit', ['class'=>'btn btn-success']) }}
+                       {!! Form::close() !!}
+               </div>
         </div>
        </div>
        </div>

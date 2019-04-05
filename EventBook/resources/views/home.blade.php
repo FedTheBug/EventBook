@@ -18,7 +18,7 @@
                     <h5>You are logged in!</h5>
                     <div class="text-center">
                         <hr>
-                        <a href="/events/create" class = "btn btn-primary">Create Event</a>
+                        <a href="/events/create" class = "btn btn-info">Create Event</a>
                     </div>
                     <div>
                         <hr>
