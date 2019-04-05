@@ -59,6 +59,13 @@ class LoginController extends Controller
         $authUser = User::where('provider_id', $user->id)->first();
         if ($authUser){
             return $authUser;
-        } 
+        }
+        
+        return User::create([
+            'name' => $user->name,
+            'email' => $user->email,
+            'provider' => strtoupper($provider),
+            'provider_id' => $user->id
+        ]);
     }
 }
