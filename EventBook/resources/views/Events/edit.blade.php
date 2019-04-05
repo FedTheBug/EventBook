@@ -34,7 +34,7 @@
                        {{ Form::textarea('description', $event->description,['class'=>'form-control', 'placeholder'=>'Write a description'])}}
                </div>
                {{Form::hidden('_method','PUT')}}
-               {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }}
+               {{ Form::submit('Submit', ['class'=>'btn btn-success']) }}
            {!! Form::close() !!}
         </div>
        </div>
