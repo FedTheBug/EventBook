@@ -23,14 +23,24 @@
                     <div>
                         <hr>
                         <h5 >Your Events:</h5>
+                        @if(count($events) > 0)
                         <table class="table table-striped">
                             <tr>
                                 <th>Title</th>
                                 <th></th>
                                 <th></th>
                             </tr>
-
-                        </table>
+                            @foreach($events as $event)
+                            <tr>
+                                <td>{{$event->title}}</td>
+                                <td><a href="/events/{{$event->id}}/edit" class="btn btn-default">Edit</a></td>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </table>
+                    @else
+                            <p>You have no events </p>
+                    @endif
 
                     </div>
                 </div>
