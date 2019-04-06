@@ -178,6 +178,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+       
+        /*
+        *Socialite Service providers
+        */
+
         Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
@@ -232,6 +237,11 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        /*
+        *Socialite Service Aliases
+        */
+
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
