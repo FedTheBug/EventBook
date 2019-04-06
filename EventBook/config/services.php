@@ -42,14 +42,16 @@ return [
             'secret' => env('STRIPE_WEBHOOK_SECRET'),
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
+    
+    ],
+
     /*
     *Socialite info added
     */
-        'facebook' => [
-            'client_id' => env('2298090237071484'),
-            'client_secret' => env('82a1b98b299d9c852662b146b4431d4e'),
-            'redirect' => 'http://eventbook.me/login/facebook/callback',
-        ],
+    'facebook' => [
+        'client_id' =>'2298090237071484',
+        'client_secret' => '82a1b98b299d9c852662b146b4431d4e',
+        'redirect' => 'https://eventbook.me/login/facebook/callback',
     ],
 
 ];

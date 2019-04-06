@@ -28,8 +28,3 @@ Auth::routes();
 
 //route to home after logged in
 Route::get('/home', 'HomeController@index');
-
-//route to Facebook Socialite
-
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
