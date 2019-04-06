@@ -42,6 +42,14 @@ return [
             'secret' => env('STRIPE_WEBHOOK_SECRET'),
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
+    /*
+    *Socialite info added
+    */
+        'facebook' => [
+            'client_id' => env('Facebook_CLIENT_ID'),
+            'client_secret' => env('Facebook_CLIENT_SECRET'),
+            'redirect' => 'http://your-callback-url',
+        ],
     ],
 
 ];
