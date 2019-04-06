@@ -26,6 +26,6 @@ class HomeController extends Controller
     {
         $organizer_id = auth()->user()->id;
         $user = User::find($organizer_id);
-        return view('home')->with('posts', $user->posts);
+        return view('home')->with('events', $user->posts);
      }
 }
