@@ -46,9 +46,9 @@ return [
     *Socialite info added
     */
         'facebook' => [
-            'client_id' => env('Facebook_CLIENT_ID'),
-            'client_secret' => env('Facebook_CLIENT_SECRET'),
-            'redirect' => 'http://your-callback-url',
+            'client_id' => env('2298090237071484'),
+            'client_secret' => env('82a1b98b299d9c852662b146b4431d4e'),
+            'redirect' => 'http://eventbook.me/login/facebook/callback',
         ],
     ],
 
