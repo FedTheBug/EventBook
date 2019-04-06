@@ -23,6 +23,14 @@
                     <div>
                         <hr>
                         <h5 >Your Events:</h5>
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Title</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+
+                        </table>
 
                     </div>
                 </div>
