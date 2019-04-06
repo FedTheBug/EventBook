@@ -29,7 +29,13 @@
                                 <th></th>
                                 <th></th>
                             </tr>
-
+                            @foreach ($events as $event)
+                                <tr>
+                                    <th>{{$event->title}}</th>
+                                <th><a href="/events/{{$event->id}}/edit" class="btn btn-success"></th>
+                                    <th></th>
+                                </tr>
+                            @endforeach
                         </table>
 
                     </div>
