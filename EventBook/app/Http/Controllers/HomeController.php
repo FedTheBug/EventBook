@@ -26,12 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $organizer_id = auth()->user()->id;
-        $events = Event::where('organizer_id', '=', $organizer_id)->get();
-
- //     throw new \Exception($events);
-
+        $events = Event::where('organizer_id','=', $organizer_id)->get();
+//      throw new \Exception($events);
         return view('home')->with('events', $events);
-        
     }
-    
 }
