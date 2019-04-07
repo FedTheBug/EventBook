@@ -23,22 +23,33 @@
                     <div>
                         <hr>
                         <h5 >Your Events:</h5>
+                    </div>
+
+                    @if(count($events) > 0)
                         <table class="table table-striped">
                             <tr>
-                                <th>Title</th>
+                                <th></th>
                                 <th></th>
                                 <th></th>
                             </tr>
                             @foreach ($events as $event)
                                 <tr>
-                                    <th>{{$event->title}}</th>
-                                <th><a href="/events/{{$event->id}}/edit" class="btn btn-success"></th>
-                                    <th></th>
+                                    <td>{{$event->name}}</td>
+                                    <td><a href="/events/{{$event->id}}/edit" class="btn btn-success">Edit</a></td>
+                                    <td>
+                                        {!!Form::open(['action' => ['EventsController@destroy',$event->id],
+                                        'method' => 'POST', 'class' => 'float-right'])!!}
+                                                {{Form::hidden('_method','DELETE')}}
+                                                {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                                        {!!Form::close()!!}
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>
+                    @else
+                        <p>You have no Events</p>
+                    @endif
 
-                    </div>
                 </div>
             </div>
         </div>
