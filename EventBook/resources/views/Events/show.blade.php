@@ -16,12 +16,14 @@
 
 <!--    Access Control: Only Event Creator Can Edit/Delete Event       -->
         @if(!Auth::guest())
-        <a href="/events/{{$event->id}}/edit" class="btn btn-success">Edit</a>
+                @if(Auth::user()->id == $event->organizer_id)        
+                        <a href="/events/{{$event->id}}/edit" class="btn btn-success">Edit</a>
 
-        {!!Form::open(['action' => ['EventsController@destroy',$event->id],
-        'method' => 'POST', 'class' => 'float-right'])!!}
-                {{Form::hidden('_method','DELETE')}}
-                {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
-        {!!Form::close()!!}
+                        {!!Form::open(['action' => ['EventsController@destroy',$event->id],
+                        'method' => 'POST', 'class' => 'float-right'])!!}
+                                {{Form::hidden('_method','DELETE')}}
+                                {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                        {!!Form::close()!!}
+                @endif
         @endif
  @endsection
