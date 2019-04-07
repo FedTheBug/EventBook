@@ -10,9 +10,12 @@
         Venue: {{ $event->venue }} <br>
         Event Date: {{ $event->event_date }} <br>
         <b> Registration Deadline: {{ $event->reg_deadline}} </b><br> 
-   <!--     Event Type: {{$event->event_type}}<br> -->
+<!--     Event Type: {{$event->event_type}}<br> -->
         Description: {{ $event->description}}
         <hr>
+
+<!--    Access Control: Only Event Creator Can Edit/Delete Event       -->
+        @if(!Auth::guest())
         <a href="/events/{{$event->id}}/edit" class="btn btn-success">Edit</a>
 
         {!!Form::open(['action' => ['EventsController@destroy',$event->id],
@@ -20,4 +23,5 @@
                 {{Form::hidden('_method','DELETE')}}
                 {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
         {!!Form::close()!!}
+        @endif
  @endsection
