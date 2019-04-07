@@ -155,6 +155,12 @@ class EventsController extends Controller
     public function destroy($id)
     {
         $event = Event::find($id);
+
+        // Check for correct user
+        if(auth()->user()->id !== $event->organizer_id){
+            return redirect('/events')->with('error','Unauthorize Page');
+        }
+        
         $event->delete();
         return redirect('/events')->with('success', 'Event Removed!');
     }
