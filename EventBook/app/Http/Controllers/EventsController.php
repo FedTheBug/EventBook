@@ -21,13 +21,23 @@ use DB;
 class EventsController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
+    /**
      * Display a listing of Events.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     { //$events =Event::all()
-        $events= Event::orderBy('event_date','asc')->paginate(5);
+        $events = Event::orderBy('event_date','asc')->paginate(5);
         return view('events.index')->with('events',$events);
 
     }
@@ -55,7 +65,7 @@ class EventsController extends Controller
             'venue' => 'required',
             'event_date' => 'required',
             'reg_deadline' => 'required',
-        //    'event_type' => 'required',
+      //    'event_type' => 'required',
             'description' => 'required',
             ]);
 
@@ -66,7 +76,7 @@ class EventsController extends Controller
             $event->description = $request->input('description');
             $event->event_date = $request->input('event_date');
             $event->reg_deadline = $request->input('reg_deadline');
-        //    $event->event_type = $request ->input('event_type');
+      //    $event->event_type = $request ->input('event_type');
             $event->description = $request ->input('description');
             $event->organizer_id = auth()->user()->id;
             $event->save();
@@ -95,6 +105,11 @@ class EventsController extends Controller
     public function edit($id)
     {
         $event = Event::find($id);
+
+        // Check for correct user
+        if(auth()->user()->id !== $event->organizer_id){
+            return redirect('/events')->with('error','Unauthorize Page');
+        }
         return view('events.edit')->with('event',$event);
     }
 
@@ -140,6 +155,12 @@ class EventsController extends Controller
     public function destroy($id)
     {
         $event = Event::find($id);
+
+        // Check for correct user
+        if(auth()->user()->id !== $event->organizer_id){
+            return redirect('/events')->with('error','Unauthorize Page');
+        }
+        
         $event->delete();
         return redirect('/events')->with('success', 'Event Removed!');
     }

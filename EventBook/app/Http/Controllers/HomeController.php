@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Event;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $organizer_id = auth()->user()->id;
-        $user = User::find($organizer_id);
-        return view('home')->with('events', $user->posts);
-     }
+        $events = Event::where('organizer_id','=', $organizer_id)->get();
+//      throw new \Exception($events);
+        return view('home')->with('events', $events);
+    }
 }
