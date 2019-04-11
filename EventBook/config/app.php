@@ -179,6 +179,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Custom Socialite
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
     ],
 
     /*

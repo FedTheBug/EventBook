@@ -9,7 +9,6 @@
         </p>
         <p>
             <a class= "btn btn-danger btn-lg" href= "/auth/google" role= "button">Login with Google</a>
-
         </p>
     </body>
 </div>
