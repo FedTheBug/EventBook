@@ -28,7 +28,7 @@ class PagesController extends Controller
     public function Services(){
         $data = array(
             'title' => 'Services',
-            'services' => ['Organize an Event', 'Create an Event']
+            'services' => ['Hosting Events', 'Participate in an Event','Corporate Training']
         );
         return view('pages.services')->with($data);
 }
