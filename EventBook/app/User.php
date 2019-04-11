@@ -52,4 +52,11 @@ class User extends Authenticatable
     public function events(){
         return $this->hasMany('App\Event');
     }
+
+    /**
+     * Social Provider
+     */
+    public function socialProvider(){
+        return $this->hasMany(SocialProvider::class);
+    }
 }

@@ -28,3 +28,11 @@ Auth::routes();
 
 //route to home after logged in
 Route::get('/home', 'HomeController@index');
+
+//route for FBID provider
+Route::get('auth/facebook', 'Auth\RegisterController@redirectToProvider');
+Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCallback');
+
+//route for G+ provider
+Route::get('auth/google', 'Auth\RegisterController@redirectToProvider1');
+Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback1');

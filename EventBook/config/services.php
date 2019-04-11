@@ -44,4 +44,18 @@ return [
         ],
     ],
 
+    //Custom Controller FB
+    'facebook' => [
+        'client_id' => '413596509450868',
+        'client_secret' => '28f6800e3c24946f4246a6db0c382289',
+        'redirect' => 'http://eventbook.me/auth/facebook/callback',
+    ],
+
+    //Custom Controller Google
+    'google' => [
+        'client_id' => '403614899305-6cfso601ln06vgfj0q97pa07o937jpr7.apps.googleusercontent.com',
+        'client_secret' => '_GGl9TizcJLMdnj_1HExK2GC',
+        'redirect' => 'http://eventbook.me/auth/google/callback',
+    ],
+
 ];
