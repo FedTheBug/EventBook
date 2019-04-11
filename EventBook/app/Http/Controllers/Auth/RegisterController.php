@@ -73,42 +73,15 @@ class RegisterController extends Controller
     }
 
 
-    //
-    /**
-     * Redirect the user to the GitHub authentication page.
-     *
-     * @return Response
-     */
-    public function redirectToProvider()
-    {
-        return Socialite::driver('facebook')->redirect();
-        
-    }
-
-    /**
-     * Obtain the user information from GitHub.
-     *
-     * @return Response
-     */
-    public function handleProviderCallback()
-    {
-        $user = Socialite::driver('facebook')->user();
-
-        return $user->getEmail();
-
-        // $user->token;
-    }
-
-
      //
     /**
      * Redirect the user to the GitHub authentication page.
      *
      * @return Response
      */
-    public function redirectToProvider1()
+    public function redirectToProvider1($provider)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
     /**
@@ -116,10 +89,10 @@ class RegisterController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback1()
+    public function handleProviderCallback1($provider)
     {
         try{
-            $socialUser = Socialite::driver('google')->user();
+            $socialUser = Socialite::driver($provider)->user();
         }
         catch(\Exception $e){
             return redirect('/');
@@ -137,7 +110,7 @@ class RegisterController extends Controller
             );
 
             $user->socialProviders()->create(
-                ['provider_id' => $socialUser->getId(), 'provider' => 'google']
+                ['provider_id' => $socialUser->getId(), 'provider' => $provider]
             );
 
         }
