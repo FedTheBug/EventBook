@@ -56,7 +56,7 @@ class User extends Authenticatable
     /**
      * Social Provider
      */
-    public function socialProvider(){
+    public function socialProviders(){
         return $this->hasMany(SocialProvider::class);
     }
 }
