@@ -19,7 +19,7 @@ class DBOperations{
         }
         else{
             $pass = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $this->con->prepare("INSERT INTO 'users' ('id', 'name', 'email', 'email_verified_at', 'password', 'remember_token', 'created_at', 'updated_at') VALUES ('?', '?', '?', NULL, '?', NULL, NULL, NULL);");
+            $stmt = $this->con->prepare("INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES ('?', '?', '?', NULL, '?', NULL, NULL, NULL);");
             $stmt->bind_param("sss", $name, $pass, $email);
             if($stmt->execute()){
                 return 1;
