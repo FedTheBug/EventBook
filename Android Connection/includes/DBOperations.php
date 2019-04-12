@@ -10,9 +10,9 @@ class DBOperations{
         require_once dirname(__FILE__).'/DBConnect.php';
         $db = new DBConnect();
         $this->con = $db->connect();
-}
+    }
     #creates new user
-    public function createUser($name, $password, $email){
+    public function createUser($name, $password, $email){  
         if($this->isUserExist($name, $email)){
             return 0;
         }else{
@@ -25,4 +25,6 @@ class DBOperations{
             else{
                 return 2;
             }
+        }
     }
+}
