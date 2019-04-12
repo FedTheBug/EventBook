@@ -3,7 +3,8 @@
 
 /*
 *
-*Gives HTTP POST Request
+* Gives HTTP POST Request
+* Returns a Response
 *
 */
 require_once '../includes/DBOperations.php';
@@ -14,7 +15,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset($_POST['name']) and
          isset($_POST['email']) and
              isset($_POST['password'])
-    ){
+    )
+    {
         #Operate the data further
         
         $db = new DBOperations();
