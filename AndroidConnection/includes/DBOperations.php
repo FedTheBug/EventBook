@@ -13,19 +13,19 @@ class DBOperations{
     }
     
     #creates new user
-    function createUser($name, $password, $email){  
+    function createUser($name, $pass, $email){  
         if($this->isUserExist($name, $email)){
             return 0;
         }
         else{
-            $pass = password_hash($password, PASSWORD_DEFAULT);
+            $password = md5($pass);
             $stmt = $this->con->prepare("INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES ('?', '?', '?', NULL, '?', NULL, NULL, NULL);");
-            $stmt->bind_param("sss", $name, $pass, $email);
+            $stmt->bind_param("sss", $name, $password, $email);
             if($stmt->execute()){
-                return 1;
+                return true;
             }
             else{
-                return 2;
+                return false;
             }
         }
     }
