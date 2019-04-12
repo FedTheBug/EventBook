@@ -13,7 +13,7 @@ class DBOperations{
     }
     
     #creates new user
-    public function createUser($name, $password, $email){  
+    function createUser($name, $password, $email){  
         if($this->isUserExist($name, $email)){
             return 0;
         }
