@@ -9,4 +9,4 @@
 	define('DB_NAME','eventbook');
 	define('DB_USER','root');
 	define('DB_PASSWORD','1234');
-	define('DB_host','localhost');
+	define('DB_HOST','localhost');
