@@ -12,7 +12,7 @@ class PagesController extends Controller
      * Home page of EventBook
      */
     public function index(){
-        $events = 'welcome!';
+        $events = 'Welcome!';
         return view('pages.index')->with('events', $events);
     
    
@@ -22,7 +22,7 @@ class PagesController extends Controller
     
     }
     public function about(){
-        $events = 'About us!';
+        $events = 'About Us!';
         return view('pages.about')->with('events', $events);
     }
     public function Services(){
