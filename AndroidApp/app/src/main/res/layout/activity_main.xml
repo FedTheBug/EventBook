@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="net.simplifiedcoding.androidphpmysql.MainActivity">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewLogin"
+    <ImageView
+        android:id="@+id/imgPlaylistItemBg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout="@id/linearLayout"
-        android:text="\n\n\nEventBook"
-        android:textAlignment="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        android:adjustViewBounds="true"
+        android:maxHeight="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/logo1" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -75,7 +71,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/linearLayout"
         android:text="Already Registered?\nClick Here to Login"
-        android:textAlignment="center" />
-    //android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat" />
 
 </RelativeLayout>
