@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#02223B">
 
     <ImageView
         android:id="@+id/imgPlaylistItemBg"
@@ -20,43 +21,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:gravity="right"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Username" />
+            android:text="\n\n\n\n\n   User Name"
+            android:textColor="#409CB1" />
 
         <EditText
             android:id="@+id/editTextUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter username" />
+            android:hint="Enter username"
+            android:textColor="#ffffff" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="password" />
+            android:text="   Password"
+            android:textColor="#409CB1" />
 
         <EditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="#ffffff" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="email" />
+            android:text="   Email"
+            android:textColor="#409CB1" />
 
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/buttonRegister"
@@ -70,6 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/linearLayout"
+        android:textColor="#409CB1"
         android:text="Already Registered?\nClick Here to Login"
         android:textAlignment="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat" />
