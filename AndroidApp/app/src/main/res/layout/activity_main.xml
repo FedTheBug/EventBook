@@ -10,6 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="net.simplifiedcoding.androidphpmysql.MainActivity">
 
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@id/linearLayout"
+        android:text="\n\n\nEventBook"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -67,7 +75,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/linearLayout"
         android:text="Already Registered?\nClick Here to Login"
-        android:textAlignment="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        android:textAlignment="center" />
+        //android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
 
 </RelativeLayout>
