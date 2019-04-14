@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
         textViewUserEmail.setText(SharedPrefManager.getInstance(this).getUserEmail());
         textViewUsername.setText(SharedPrefManager.getInstance(this).getName());
     }
-/*
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -54,5 +54,4 @@ public class ProfileActivity extends AppCompatActivity {
         }
         return true;
     }
-    */
 }
