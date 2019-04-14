@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $response['message'] = "Some error occurred please try again";          
         }elseif($result == 0){
             $response['error'] = true; 
-            $response['message'] = "It seems you are already registered!! please choose a different Email and Username.";                     
+            $response['message'] = "It seems you are already registered !!  Please choose a different Email and Username.";                     
         }
  
     }else{

@@ -39,7 +39,7 @@
             return $stmt->num_rows > 0; 
         }
  
-        public function getUserByUsername($name){
+        public function getUserByName($name){
             $stmt = $this->con->prepare("SELECT * FROM users WHERE name = ?");
             $stmt->bind_param("s",$name);
             $stmt->execute();
