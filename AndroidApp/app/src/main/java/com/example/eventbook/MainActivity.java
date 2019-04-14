@@ -1,5 +1,6 @@
 package com.example.eventbook;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -29,7 +30,6 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
     private EditText editTextUsername, editTextEmail, editTextPassword;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
@@ -41,11 +41,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        if(SharedPrefManager.getInstance(this).isLoggedIn()){
-//            finish();
-//            startActivity(new Intent(this, ProfileActivity.class));
-//            return;
-//        }
+/*
+        if(SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            startActivity(new Intent(this, ProfileActivity.class));
+            return;
+        }
+*/
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void registerUser() {
         final String email = editTextEmail.getText().toString().trim();
-        final String username = editTextUsername.getText().toString().trim();
+        final String name = editTextUsername.getText().toString().trim();
         final String password = editTextPassword.getText().toString().trim();
 
         progressDialog.setMessage("Registering user...");
@@ -96,15 +98,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("username", username);
-                params.put("email", email);
+                params.put("name", name);
                 params.put("password", password);
+                params.put("email", email);
                 return params;
             }
         };
 
-
-//        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
 
 
     }
