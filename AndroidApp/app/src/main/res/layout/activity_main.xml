@@ -81,8 +81,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/linearLayout"
         android:textColor="#409CB1"
-        android:text="\nAlready Registered?\nClick Here to Login"
-        android:textAlignment="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        android:text="\n\nAlready Registered?\nClick Here to Login"
+        android:textAlignment="center" />
 
 </RelativeLayout>
