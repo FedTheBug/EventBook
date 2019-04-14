@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                                 obj.getString("name"),
                                                 obj.getString("email")
                                         );
- //                               startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                                 finish();
                             }else{
                                 Toast.makeText(
