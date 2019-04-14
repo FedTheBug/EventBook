@@ -30,18 +30,18 @@
             }
         }
  
-        public function userLogin($name, $pass){
+        public function userLogin($email, $pass){
             $password = md5($pass);
-            $stmt = $this->con->prepare("SELECT id FROM users WHERE name = ? AND password = ?");
-            $stmt->bind_param("ss",$name,$password);
+            $stmt = $this->con->prepare("SELECT id FROM users WHERE email = ? AND password = ?");
+            $stmt->bind_param("ss",$email,$password);
             $stmt->execute();
             $stmt->store_result(); 
             return $stmt->num_rows > 0; 
         }
  
-        public function getUserByName($name){
-            $stmt = $this->con->prepare("SELECT * FROM users WHERE name = ?");
-            $stmt->bind_param("s",$name);
+        public function getUserByEmail($email){
+            $stmt = $this->con->prepare("SELECT * FROM users WHERE email = ?");
+            $stmt->bind_param("s",$email);
             $stmt->execute();
             return $stmt->get_result()->fetch_assoc();
         }

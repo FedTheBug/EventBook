@@ -5,11 +5,11 @@ require_once '../includes/DbOperations.php';
 $response = array(); 
  
 if($_SERVER['REQUEST_METHOD']=='POST'){
-    if(isset($_POST['name']) and isset($_POST['password'])){
+    if(isset($_POST['email']) and isset($_POST['password'])){
         $db = new DbOperations(); 
  
-        if($db->userLogin($_POST['name'], $_POST['password'])){
-            $user = $db->getUserByName($_POST['name']);
+        if($db->userLogin($_POST['email'], $_POST['password'])){
+            $user = $db->getUserByEmail($_POST['email']);
             $response['error'] = false; 
             $response['id'] = $user['id'];
             $response['email'] = $user['email'];
