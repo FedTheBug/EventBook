@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".LoginActivity"
     android:background="#02223B">
 
     <ImageView
@@ -27,9 +27,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="\n\n\n\n\n\n\n\n\n\n Email"
+            android:text="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Email"
             android:textColor="#409CB1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:text=" Password"
             android:textColor="#409CB1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            />
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -56,12 +56,11 @@
             />
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
             android:textColor="	#ffffff"
-            android:background="#409CB1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:background="#409CB1" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -28,8 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="\n\n User Name"
-            android:textColor="#409CB1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:textColor="#409CB1" />
 
         <EditText
             android:id="@+id/editTextUsername"
@@ -43,8 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Password"
-            android:textColor="#409CB1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:textColor="#409CB1" />
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -58,8 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Email"
-            android:textColor="#409CB1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:textColor="#409CB1" />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -75,8 +72,7 @@
             android:layout_height="wrap_content"
             android:text="Register User"
             android:textColor="#ffffff"
-            android:background="#409CB1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:background="#409CB1" />
     </LinearLayout>
 
     <TextView
