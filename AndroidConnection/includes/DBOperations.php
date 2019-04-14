@@ -12,7 +12,8 @@
         }
  
         /*CRUD -> C -> CREATE */
- 
+        
+        # Creates a New User
         public function createUser($name, $pass, $email){
             if($this->isUserExist($name,$email)){
                 return 0; 
@@ -30,6 +31,7 @@
             }
         }
  
+        # Handles User Login
         public function userLogin($email, $pass){
             $password = md5($pass);
             $stmt = $this->con->prepare("SELECT id FROM users WHERE email = ? AND password = ?");
@@ -39,6 +41,7 @@
             return $stmt->num_rows > 0; 
         }
  
+        # Gets a User by Email Address
         public function getUserByEmail($email){
             $stmt = $this->con->prepare("SELECT * FROM users WHERE email = ?");
             $stmt->bind_param("s",$email);
@@ -46,13 +49,22 @@
             return $stmt->get_result()->fetch_assoc();
         }
          
- 
+        # Checks Whether The Username and Password exists or not
         private function isUserExist($name, $email){
             $stmt = $this->con->prepare("SELECT id FROM users WHERE name = ? OR email = ?");
             $stmt->bind_param("ss", $name, $email);
             $stmt->execute(); 
             $stmt->store_result(); 
             return $stmt->num_rows > 0; 
+        }
+
+        # Gets All The Events From Database
+        public function getAllEvents(){
+            $today = date("Y-m-d");
+            $stmt = $this->con->prepare("select * from events where event_date >= ?");
+            $stmt->bind_param("s", $today);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all();
         }
  
     }
