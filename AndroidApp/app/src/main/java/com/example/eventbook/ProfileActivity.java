@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -29,13 +27,13 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
         textViewUsername = (TextView) findViewById(R.id.textViewUsername);
-        textViewUserEmail = (TextView) findViewById(R.id.textViewUseremail);
+        textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
 
 
         textViewUserEmail.setText(SharedPrefManager.getInstance(this).getUserEmail());
-        textViewUsername.setText(SharedPrefManager.getInstance(this).getUsername());
+        textViewUsername.setText(SharedPrefManager.getInstance(this).getName());
     }
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -56,4 +54,5 @@ public class ProfileActivity extends AppCompatActivity {
         }
         return true;
     }
+    */
 }
