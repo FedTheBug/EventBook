@@ -56,5 +56,18 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/buttonEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="96dp"
+        android:background="#409CB1"
+        android:text="Events"
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
+
 
 </RelativeLayout>
