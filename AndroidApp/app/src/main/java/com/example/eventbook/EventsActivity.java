@@ -3,7 +3,7 @@ package com.example.eventbook;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class EvnetsActivity extends AppCompatActivity {
+public class EventsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
