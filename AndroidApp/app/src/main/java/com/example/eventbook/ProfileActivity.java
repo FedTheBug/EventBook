@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,10 +22,12 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
         if(!SharedPrefManager.getInstance(this).isLoggedIn()){
             finish();
             startActivity(new Intent(this, LoginActivity.class));
         }
+
 
         textViewUsername = (TextView) findViewById(R.id.textViewUsername);
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
@@ -48,7 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
             case R.id.menuLogout:
                 SharedPrefManager.getInstance(this).logout();
                 finish();
-                startActivity(new Intent(this, LoginActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 break;
 
             // Action on Click Settings
@@ -60,7 +63,13 @@ public class ProfileActivity extends AppCompatActivity {
             case R.id.menuEvents:
             startActivity(new Intent(this, EventsActivity.class));
             break;
+
+            // Action on Click Dashboard
+            case R.id.menuDashboard:
+                startActivity(new Intent(this, ProfileActivity.class));
+                break;
         }
         return true;
     }
+
 }
