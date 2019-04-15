@@ -51,12 +51,15 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(this, LoginActivity.class));
                 break;
 
-            // Action on click Settings
+            // Action on Click Settings
             case R.id.menuSettings:
                 Toast.makeText(this, "You clicked settings", Toast.LENGTH_LONG).show();
                 break;
 
-
+            // Action on Click Events
+            case R.id.menuEvents:
+            startActivity(new Intent(this, EventsActivity.class));
+            break;
         }
         return true;
     }
