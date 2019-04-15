@@ -2,7 +2,7 @@
 
 /*
 *
-* Handles a GET Request to fatch Events
+* Handles a GET Request to featch Events
 * returns a response 
 * 
 */

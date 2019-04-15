@@ -43,14 +43,20 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
+
+            // Action After Logout
             case R.id.menuLogout:
                 SharedPrefManager.getInstance(this).logout();
                 finish();
                 startActivity(new Intent(this, LoginActivity.class));
                 break;
+
+            // Action on click Settings
             case R.id.menuSettings:
                 Toast.makeText(this, "You clicked settings", Toast.LENGTH_LONG).show();
                 break;
+
+
         }
         return true;
     }
