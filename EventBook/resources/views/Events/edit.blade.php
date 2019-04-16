@@ -9,7 +9,7 @@
            <a href="/events" class="btn btn-info"> Go Back </a>
            <hr>
            
-           {!! Form::open(['action'=> ['EventsController@update', $event->id], 'method'=>'POST']) !!}
+           {!! Form::open(['action'=> ['EventsController@update', $event->id], 'method'=>'POST','enctype' => 'multipart/form-data']) !!}
                <div class="form-group">
                        {{ Form::label('name','Name')}}
                        {{ Form::text('name', $event->name,['class'=>'form-control', 'placeholder'=>'Event Name'])}}
