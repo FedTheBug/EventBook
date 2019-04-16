@@ -152,60 +152,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-/*
-    // fetch all Events from the database and add them to the array list
-    private void fetchAllEvents(){
-        progressDialog.show();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET,
-                Constants.URL_ALL_EVENTS,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            progressDialog.dismiss();
-                            // response is a JSONArray
-                            JSONArray jArray = new JSONArray(response);
-
-                            // extracting JSONObjects from each element of JSONArray
-                            for (int i = 0; i < jArray.length(); i++) {
-                                JSONObject jb = jArray.getJSONObject(i);
-                                int id = jb.getInt("id");
-                                String name = jb.getString("name");
-                                String venue = jb.getString("venue");
-                                String event_date = jb.getString("event_date");
-                                String reg_deadline = jb.getString("reg_deadline");
-                                String description = jb.getString("description");
-                                int organizer_id = jb.getInt("organizer_id");
 
 
-                                // creating a new event object
-                                Event event = new Event(id ,name, venue, event_date,
-                                        reg_deadline, description, organizer_id);
-
-                                // adding the object to the array list
-                                arrayList.add(event);
-
-                                // notifying the adapter for the change
-                                adapter.notifyDataSetChanged();
-                            }
-                        } catch (JSONException e) {
-                            Toast.makeText( getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        progressDialog.hide();
-                        Toast.makeText( getApplicationContext(),  error.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                }){
-
-        };
-        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
-    }
-*/
 
     @Override
     public void onClick(View view) {
