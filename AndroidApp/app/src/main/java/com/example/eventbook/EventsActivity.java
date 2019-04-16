@@ -75,6 +75,7 @@ public class EventsActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             progressDialog.dismiss();
+
                             // response is a JSONArray
                             JSONArray jArray = new JSONArray(response);
 

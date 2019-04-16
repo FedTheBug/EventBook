@@ -37,29 +37,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonRegister;
     private ProgressDialog progressDialog;
     private TextView textViewLogin;
-    ListView listViewEvents;
-    ArrayList<Event> arrayList;
-    ArrayAdapter<Event> adapter;
-
-
-
-
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-/*
-        // initializing
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Loading...");
-        listViewEvents = (ListView) findViewById(R.id.listViewEvents);
-        arrayList = new ArrayList<Event>();
-*/
-
 
 
         //After Login Finish:LoginActivity, Start:ProfileActivity
@@ -68,28 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, ProfileActivity.class));
             return;
         }
-
-/*
-        // fetch all Events from the database and add them to the array list
-        fetchAllEvents();
-
-        // initializing adapter with Event array list
-        adapter = new ArrayAdapter<Event>(MainActivity.this, android.R.layout.simple_list_item_1, arrayList);
-        listViewEvents.setAdapter(adapter);
-
-        // action listener for each item in the listViewEvents
-        listViewEvents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // goes to Event details screen
-                Intent intent = new Intent(getApplicationContext(), EventsActivity.class);
-                Event event = arrayList.get(position);
-                // putting an object as an intent extra
-                intent.putExtra("Event",(Serializable) event);
-                startActivity(intent);
-            }
-        });
-*/
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
@@ -149,10 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
 
-
     }
-
-
 
 
     @Override
