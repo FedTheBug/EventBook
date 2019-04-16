@@ -9,7 +9,7 @@
            <a href="/events" class="btn btn-info"> Go Back </a>
            <hr>
            
-           {!! Form::open(['action'=> 'EventsController@store', 'method'=>'POST']) !!}
+           {!! Form::open(['action'=> 'EventsController@store', 'method'=>'POST','enctype' => 'multipart/data']) !!}
                <div class="form-group">
                        {{ Form::label('name','Name')}}
                        {{ Form::text('name', '',['class'=>'form-control', 'placeholder'=>'Event Name'])}}
@@ -36,11 +36,15 @@
                        {{ Form::label('description','Description')}}
                        {{ Form::textarea('description', '', ['class'=> 'form-control', 'placeholder' => 'Write a description'])}}
                </div>
+                </div>
+                <div class="form-group">
+                        {{Form::file('cover_image')}}
+                </div>
                
                <div class="text-right">
                        {{ Form::submit('Submit', ['class'=>'btn btn-success']) }}
                        {!! Form::close() !!}
-               </div>
+               
         </div>
        </div>
        </div>
