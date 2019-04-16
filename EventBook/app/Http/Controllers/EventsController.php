@@ -67,24 +67,24 @@ class EventsController extends Controller
             'reg_deadline' => 'required',
       //    'event_type' => 'required',
             'description' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            //'cover_image' => 'image|nullable|max:1999'
             ]);
 
             //Handle File Upload
-            if($request->hasFile('cover_image')){
+            //if($request->hasFile('cover_image')){
                 //Get File Name with the Extension
-                $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+              //  $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
                 //Get just Filename
-                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+               // $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
                 //Get just Extension
-                $extension = $request ->file('cover_image')-getClientOriginalExtension();
+               // $extension = $request ->file('cover_image')-getClientOriginalExtension();
                 //Filename to Store
-                $fileNameToStore = $filename.'_'.time().'.'.$extension;
+               // $fileNameToStore = $filename.'_'.time().'.'.$extension;
                 //Upload Image
-                $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
-            }else{
-                $fileNameToStore = 'noimage.jpeg';
-            }
+              //  $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+          //  }else{
+             //   $fileNameToStore = 'noimage.jpeg';
+           // }
 
             //Create Event
             $event = new event;
@@ -96,7 +96,7 @@ class EventsController extends Controller
       //    $event->event_type = $request ->input('event_type');
             $event->description = $request ->input('description');
             $event->organizer_id = auth()->user()->id;
-            $event->cover_image = $fileNameToStore;
+          //  $event->cover_image = $fileNameToStore;
             $event->save();
 
         return redirect('/events')->with('success','Event Created!');

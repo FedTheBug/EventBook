@@ -13,9 +13,9 @@ class AddCoverImageToEvents extends Migration
      */
     public function up()
     {
-        Schema::table('events', function (Blueprint $table) {
-            $table->string('cover_image');
-        });
+        //Schema::table('events', function (Blueprint $table) {
+           // $table->string('cover_image');
+       // });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddCoverImageToEvents extends Migration
      */
     public function down()
     {
-        Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('cover_image');
-        });
+        //Schema::table('events', function (Blueprint $table) {
+           // $table->dropColumn('cover_image');
+        //});
     }
 }
