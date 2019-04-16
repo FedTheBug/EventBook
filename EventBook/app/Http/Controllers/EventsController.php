@@ -96,6 +96,7 @@ class EventsController extends Controller
       //    $event->event_type = $request ->input('event_type');
             $event->description = $request ->input('description');
             $event->organizer_id = auth()->user()->id;
+            $event->cover_image = $fileNameToStore;
             $event->save();
 
         return redirect('/events')->with('success','Event Created!');
