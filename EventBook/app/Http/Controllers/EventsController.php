@@ -12,6 +12,7 @@ namespace App\Http\Controllers;
 
 //using Models in this class
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Event;
 use App\User;
 use App\Organizer;
@@ -169,8 +170,11 @@ class EventsController extends Controller
             $event->description = $request->input('description');
             $event->event_date = $request->input('event_date');
             $event->reg_deadline = $request->input('reg_deadline');
-        //    $event->event_type = $request ->input('event_type');
+        //  $event->event_type = $request ->input('event_type');
             $event->description = $request ->input('description');
+            if($request->hasFile('cover_image')){
+                $event->cover_image =  $fileNameToStore;
+            }
             $event->save();
 
         return redirect('/events')->with('succes','Event Updated!');
@@ -190,6 +194,11 @@ class EventsController extends Controller
         // Check for correct user
         if(auth()->user()->id !== $event->organizer_id){
             return redirect('/events')->with('error','Unauthorize Page');
+        }
+
+        if($event->cover_image != 'noimage.jpeg'){
+            //Delete Image
+            Storage:: delete('public/cover_images/'.$event->cover_images);
         }
         
         $event->delete();
