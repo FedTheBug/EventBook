@@ -12,11 +12,11 @@
 
                 </div>
                 <div class="col-md-8 col-sm-8">
-
+                        <h3><a href ="/events/{{$event->id}}">{{$event->name}}</a></h3>
+                        <small>Event Date: {{$event->event_date}}</small>
                 </div>
             </div>
-            <h3><a href ="/events/{{$event->id}}">{{$event->name}}</a></h3>
-            <small>Event Date: {{$event->event_date}}</small>
+            
             <hr>
         </div>
     @endforeach
