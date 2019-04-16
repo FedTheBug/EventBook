@@ -46,16 +46,8 @@ public class EventsActivity extends AppCompatActivity {
         fetchAllEvents();
 
 
-        adapter = new ArrayAdapter<Event>(EventsActivity.this, android.R.layout.simple_list_item_1, arrayList);
+        adapter = new ArrayAdapter<Event>(EventsActivity.this, android.R.layout.	simple_expandable_list_item_1, arrayList);
         listViewEvents.setAdapter(adapter);
-/*
-        ArrayAdapter adapter = new ArrayAdapter<Event>(this, R.layout.activity_evnets, arrayList);
-//        ListView listView = (ListView) findViewById(R.id.listViewEvents);
-        listViewEvents.setAdapter(adapter);
-
-/*      ListView listView = (ListView) findViewById(R.id.listViewEvents);
-        listViewEvents
-*/
 
         // action listener for each item in the listViewEvents
         listViewEvents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -101,6 +93,10 @@ public class EventsActivity extends AppCompatActivity {
                                 Event event = new Event(id, name, venue, event_date,
                                         reg_deadline, description, organizer_id);
 
+                                // add object to the array list
+                                arrayList.add(event);
+                                // notifying the adapter for the change
+                                adapter.notifyDataSetChanged();
 
                             }
                         } catch (JSONException e) {
