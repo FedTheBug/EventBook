@@ -67,7 +67,19 @@ class EventsController extends Controller
             'reg_deadline' => 'required',
       //    'event_type' => 'required',
             'description' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
             ]);
+
+            //Handle File Upload
+            if($request->hasFile('cover_image')){
+                //Get File Name with the Extention
+                $filenameWithExt = $request->file('cover_image')->getClientOriginalImage();
+                //Get just Filename
+
+                //Get just Extention
+            }else{
+                $fileNameToStore = 'noimage.jpeg';
+            }
 
             //Create Event
             $event = new event;
