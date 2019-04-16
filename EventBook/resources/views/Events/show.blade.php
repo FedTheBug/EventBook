@@ -5,6 +5,8 @@
         <h1 class="card-title">
                 {{ $event->name }}
         </h1>
+        <img style="width:100%" src="/storage/cover_images/{{$event->cover_image}}">
+        <br> <br>
         <p class="card-text">
 
         Venue: {{ $event->venue }} <br>
