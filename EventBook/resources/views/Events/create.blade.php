@@ -37,12 +37,16 @@
                        {{ Form::textarea('description', '', ['class'=> 'form-control', 'placeholder' => 'Write a description'])}}
                </div>
                 </div>
+                <!--<div class="form-group">
+                        {{Form::file('cover_image')}}
+                </div>
+                -->
                <div class="text-right">
                        {{ Form::submit('Submit', ['class'=>'btn btn-success']) }}
                        {!! Form::close() !!}
                
                 </div>
        </div>
-       </div>
+</div>
        
 @endsection
