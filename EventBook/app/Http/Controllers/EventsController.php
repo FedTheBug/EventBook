@@ -67,7 +67,7 @@ class EventsController extends Controller
             'reg_deadline' => 'required',
       //    'event_type' => 'required',
             'description' => 'required',
-            //'cover_image' => 'image|nullable|max:1999'
+            'cover_image' => 'image|nullable|max:1999'
             ]);
 
             //Handle File Upload
