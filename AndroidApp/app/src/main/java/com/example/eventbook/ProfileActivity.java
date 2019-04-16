@@ -8,13 +8,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private TextView textViewUsername, textViewUserEmail;
+    private Button buttonEvents;
 
 
     @Override
@@ -32,6 +34,8 @@ public class ProfileActivity extends AppCompatActivity {
         textViewUsername = (TextView) findViewById(R.id.textViewUsername);
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
 
+        buttonEvents = (Button) findViewById(R.id.buttonEvents);
+        buttonEvents.setOnClickListener(this);
 
         textViewUserEmail.setText(SharedPrefManager.getInstance(this).getUserEmail());
         textViewUsername.setText(SharedPrefManager.getInstance(this).getName());
@@ -72,4 +76,9 @@ public class ProfileActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onClick(View v) {
+        if(v == buttonEvents)
+            startActivity(new Intent(this, EventsActivity.class));
+    }
 }
