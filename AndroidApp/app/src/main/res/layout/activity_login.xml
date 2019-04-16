@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
     android:background="#02223B">
 
     <ImageView
@@ -27,36 +27,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="\n\n User Name"
-            android:textColor="#409CB1" />
-
-        <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter username"
-            android:textColor="#ffffff" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" Password"
-            android:textColor="#409CB1" />
-
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter password"
-            android:inputType="textPassword"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" Email"
-            android:textColor="#409CB1" />
+            android:text="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Email"
+            android:textColor="#409CB1"
+            />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -66,22 +39,28 @@
             android:inputType="textEmailAddress"
             android:textColor="#ffffff" />
 
-        <Button
-            android:id="@+id/buttonRegister"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register User"
+            android:text=" Password"
+            android:textColor="#409CB1"
+            />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter password"
+            android:inputType="textPassword"
             android:textColor="#ffffff"
+            />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="	#ffffff"
             android:background="#409CB1" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textViewLogin"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/linearLayout"
-        android:textColor="#409CB1"
-        android:text="\n\nAlready Registered?\nClick Here to Login"
-        android:textAlignment="center" />
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

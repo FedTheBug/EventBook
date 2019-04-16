@@ -1,5 +1,7 @@
 package com.example.eventbook;
 
+//Using Singleton Pattern
+
 import android.content.Context;
 
 import com.android.volley.Request;

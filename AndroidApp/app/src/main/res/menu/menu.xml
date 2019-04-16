@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuEvents"
+        android:title="Events"
+        />
+
+    <item
+        android:id="@+id/menuDashboard"
+        android:title="Dashboard"
+        />
+
+    <item
+        android:id="@+id/menuSettings"
+        android:title="Settings"
+        />
+
+    <item
+        android:id="@+id/menuLogout"
+        android:title="Logout"
+        />
+
+</menu>
