@@ -77,7 +77,7 @@ class EventsController extends Controller
                 //Get just Filename
                 $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
                 //Get just Extension
-                $extension = $request ->file('cover_image')-getClientOriginalExtension();
+                $extension = $request->file('cover_image')->getClientOriginalExtension();
                 //Filename to Store
                 $fileNameToStore = $filename.'_'.time().'.'.$extension;
                 //Upload Image
