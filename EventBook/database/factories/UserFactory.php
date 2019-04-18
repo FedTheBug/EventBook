@@ -27,7 +27,9 @@ $factory->define(User::class, function (Faker $faker) {
 });
 $factory->define(User::class, function (Faker $faker) {
     return [
-        
+        'name' => $faker->name,
+        'venue' => $faker->name,
+        'description' => $fake->paragraph,
     ];
 
 });
