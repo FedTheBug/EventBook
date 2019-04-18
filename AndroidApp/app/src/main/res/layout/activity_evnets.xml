@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EventsActivity"
-    android:background="#353A40">
+    android:background="#409CB1">
 
     <ListView
         android:id="@+id/listViewEvents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#ADD8E6">
+        android:textColor="#409CB1">
     </ListView>
 
 </android.support.constraint.ConstraintLayout>

@@ -2,7 +2,7 @@
 
 /*
 *
-* Handles a GET Request to featch Events
+* Handles a GET Request to fetch Events
 * returns a response 
 * 
 */
@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         $response['event_date'] = $event[3];
         $response['reg_deadline'] = $event[4];
         $response['description'] = $event[5];
-        $response['organizer_id'] = $event[0];
+        $response['organizer_id'] = $event[8];
 
         array_push($response_collection, $response);
     }
