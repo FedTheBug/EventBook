@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonRegister;
     private ProgressDialog progressDialog;
     private TextView textViewLogin;
+    private Button buttonEvents;
     
 
     @Override
@@ -59,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewLogin = (TextView) findViewById(R.id.textViewLogin);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
+
+        buttonEvents = (Button) findViewById(R.id.buttonEvents);
+        buttonEvents.setOnClickListener(this);
 
         progressDialog = new ProgressDialog(this);
 
@@ -119,5 +123,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             registerUser();
         if(view == textViewLogin)
             startActivity(new Intent(this, LoginActivity.class));
+
     }
 }
