@@ -240,7 +240,7 @@ public class EventsActivity extends AppCompatActivity {
                         }
                         if (photoFile != null) {
                             Uri photoURI = FileProvider.getUriForFile(context,
-                                    "com.cse.android.fileprovider",
+                                    "com.example.android.fileprovider",
                                     photoFile);
                             intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                             startActivityForResult(intent, 1);
