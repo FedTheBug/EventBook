@@ -9,20 +9,22 @@
 
     <android.support.v7.widget.SearchView
         android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="59dp"
         android:layout_marginRight="65dp"
-        android:background="#ffffff"
+        android:background="#409CB1"
         android:queryHint="Search Here">
+
     </android.support.v7.widget.SearchView>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fabSeachWithPhoto"
-        android:layout_width="wrap_content"
+        android:id="@+id/SeachWithPhoto"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_camera"
-        android:layout_margin="16dp" />
-    
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_camera" />
+
     <ListView
         android:id="@+id/listViewEvents"
         android:layout_width="match_parent"
