@@ -33,6 +33,4 @@ dependencies {
     implementation 'com.google.android.gms:play-services-vision:17.0.2'
 
 
-    
-
 }

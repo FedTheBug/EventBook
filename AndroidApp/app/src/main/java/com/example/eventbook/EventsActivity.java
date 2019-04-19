@@ -294,7 +294,6 @@ public class EventsActivity extends AppCompatActivity {
         }
     }
 
-
     // Create A Temporary File
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
