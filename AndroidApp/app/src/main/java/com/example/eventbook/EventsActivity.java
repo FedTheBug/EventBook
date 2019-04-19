@@ -89,7 +89,7 @@ public class EventsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Goes To Event Details Activity
-                Intent intent = new Intent(getApplicationContext(), EventsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EventDetailsActivity.class);
                 Event event= arrayList.get(position);
                 // putting an object as an intent extra
                 intent.putExtra("Event",(Serializable) event);
@@ -206,7 +206,7 @@ public class EventsActivity extends AppCompatActivity {
                 flag = true;
 
                 // Goes To Event Details Activity
-                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EventDetailsActivity.class);
                 // putting an object as an intent extra
                 intent.putExtra("Event",(Serializable) event);
                 startActivity(intent);
