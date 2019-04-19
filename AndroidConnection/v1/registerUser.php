@@ -1,6 +1,6 @@
 <?php 
  
-require_once '../includes/DbOperations.php';
+require_once '../includes/DBOperations.php';
  
 $response = array(); 
  
@@ -12,9 +12,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         {
         //operate the data further 
  
-        $db = new DbOperations(); 
+        $db = new DBOperations(); 
  
-        $result = $db->createUser(   $_POST['name'],
+        $result = $db->createUser(  $_POST['name'],
                                     $_POST['password'],
                                     $_POST['email']
                                 );
