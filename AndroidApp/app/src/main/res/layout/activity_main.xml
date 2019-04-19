@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="\n\n User Name"
+            android:text="\n User Name"
             android:textColor="#409CB1" />
 
         <EditText
