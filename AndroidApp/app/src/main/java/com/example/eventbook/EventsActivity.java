@@ -261,4 +261,36 @@ public class EventsActivity extends AppCompatActivity {
         builder.show();
     }
 
+    // Action After Choosing Option For 'Take a photo'
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 1) {
+                BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+                bmOptions.inJustDecodeBounds = true;
+                BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
+                int photoW = bmOptions.outWidth;
+                int photoH = bmOptions.outHeight;
+
+                bmOptions.inJustDecodeBounds = false;
+                bmOptions.inPurgeable = true;
+
+                Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
+                String txt = getTextFromImage(bitmap);
+                searchByPhoto(txt);
+            }else if(requestCode == 2){
+                Bitmap bm=null;
+                if (data != null) {
+                    try {
+                        bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                String txt =  getTextFromImage(bm);
+                searchByPhoto(txt);
+            }
+        }
+    }
 }
