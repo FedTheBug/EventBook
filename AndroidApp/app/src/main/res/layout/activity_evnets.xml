@@ -11,7 +11,8 @@
             android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:queryHint="Search Here">
+            android:queryHint="Search Here"
+            android:background="#ffffff">
         </android.support.v7.widget.SearchView>
 
 
