@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -30,6 +31,7 @@ public class EventsActivity extends AppCompatActivity {
     ArrayList<Event> arrayList;
     ArrayAdapter<Event> adapter;
     private ProgressDialog progressDialog;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class EventsActivity extends AppCompatActivity {
 
 
         // initializing variables
+        searchView = (SearchView) findViewById(R.id.search);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         listViewEvents = (ListView) findViewById(R.id.listViewEvents);
@@ -63,6 +66,29 @@ public class EventsActivity extends AppCompatActivity {
             }
         });
 
+        // Find Event From Event List
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                boolean found = false;
+                for(int i=0; i<listViewEvents.getCount(); i++){
+                    if(listViewEvents.getAdapter().getItem(i).toString().toLowerCase().contains(query.toLowerCase())){
+                        adapter.getFilter().filter(query);
+                        found = true;
+                    }
+                    if(!found){
+                        Toast.makeText(EventsActivity.this, "No Match found",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        
     }
 
     // Fetch All Events From The Database and Add Them To The Array List
