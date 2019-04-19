@@ -1,8 +1,17 @@
 package com.example.eventbook;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -27,9 +36,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 import java.sql.Array;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class EventsActivity extends AppCompatActivity {
 
@@ -38,6 +51,9 @@ public class EventsActivity extends AppCompatActivity {
     ArrayAdapter<Event> adapter;
     private ProgressDialog progressDialog;
     SearchView searchView;
+    FloatingActionButton SeachWithPhoto;
+    Context context;
+    String mCurrentPhotoPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +67,8 @@ public class EventsActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         listViewEvents = (ListView) findViewById(R.id.listViewEvents);
         arrayList = new ArrayList<Event>();
+        context = this;
+        SeachWithPhoto = findViewById(R.id.SeachWithPhoto);
 
         fetchAllEvents();
 
@@ -58,11 +76,19 @@ public class EventsActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<Event>(EventsActivity.this, android.R.layout.	simple_expandable_list_item_1, arrayList);
         listViewEvents.setAdapter(adapter);
 
+        // Action Listener For Image Floating Button
+        SeachWithPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectImage();
+            }
+        });
+
         // action listener for each item in the listViewEvents
         listViewEvents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                 // goes to competition details screen
+                // Goes To Event Details Activity
                 Intent intent = new Intent(getApplicationContext(), EventsActivity.class);
                 Event event= arrayList.get(position);
                 // putting an object as an intent extra
@@ -178,16 +204,20 @@ public class EventsActivity extends AppCompatActivity {
 
             if(string.contains(event.getName())){
                 flag = true;
+
                 // Goes To Event Details Activity
                 Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
                 // putting an object as an intent extra
                 intent.putExtra("Event",(Serializable) event);
                 startActivity(intent);
+
+
             }
         }
         if(flag == false){
             Toast.makeText(this, "Not found!", Toast.LENGTH_SHORT).show();
         }
     }
+    
 
 }
