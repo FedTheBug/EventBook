@@ -65,7 +65,7 @@ public class EventsActivity extends AppCompatActivity {
 
     }
 
-    // fetch all Events from the database and add them to the arraylist
+    // Fetch All Events From The Database and Add Them To The Array List
     private void fetchAllEvents() {
         progressDialog.show();
         StringRequest stringRequest = new StringRequest(Request.Method.GET,

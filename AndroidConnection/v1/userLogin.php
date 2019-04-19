@@ -1,12 +1,12 @@
 <?php 
  
-require_once '../includes/DbOperations.php';
+require_once '../includes/DBOperations.php';
  
 $response = array(); 
  
 if($_SERVER['REQUEST_METHOD']=='POST'){
     if(isset($_POST['email']) and isset($_POST['password'])){
-        $db = new DbOperations(); 
+        $db = new DBOperations(); 
  
         if($db->userLogin($_POST['email'], $_POST['password'])){
             $user = $db->getUserByEmail($_POST['email']);
