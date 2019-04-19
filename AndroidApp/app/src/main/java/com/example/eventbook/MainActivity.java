@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             registerUser();
         if(view == textViewLogin)
             startActivity(new Intent(this, LoginActivity.class));
-
+        if(view == buttonEvents)
+            startActivity(new Intent(this, EventsActivity.class));
     }
 }
