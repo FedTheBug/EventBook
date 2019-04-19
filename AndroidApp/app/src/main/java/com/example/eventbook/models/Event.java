@@ -1,5 +1,9 @@
 package com.example.eventbook.models;
 
+import android.content.Context;
+
+import com.example.eventbook.SharedPrefManager;
+
 import java.io.Serializable;
 
 /**
@@ -19,6 +23,8 @@ public class Event implements Serializable {
     private String reg_deadline;
     private String description;
     private int organizer_id;
+    private static Event mInstance;
+    private static Context mCtx;
 
     public Event(int id, String name, String venue, String event_date, String reg_deadline,
                        String description, int organizer_id) {
@@ -30,6 +36,18 @@ public class Event implements Serializable {
         this.description = description;
         this.organizer_id = organizer_id;
 
+    }
+
+    private Event(Context context) {
+        mCtx = context;
+
+    }
+
+    public static synchronized Event getInstance(Context context) {
+        if (mInstance == null) {
+            mInstance = new Event(context);
+        }
+        return mInstance;
     }
 
     public String getDescription() {
