@@ -2,9 +2,12 @@ package com.example.eventbook;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
+import android.util.SparseArray;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,6 +19,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.eventbook.models.Event;
+import com.google.android.gms.vision.Frame;
+import com.google.android.gms.vision.text.TextBlock;
+import com.google.android.gms.vision.text.TextRecognizer;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -143,5 +149,26 @@ public class EventsActivity extends AppCompatActivity {
         };
         RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
     }
+
+
+    // Text From Image
+    private String getTextFromImage(Bitmap bitmap){
+        String str= "";
+        TextRecognizer tr = new TextRecognizer.Builder(getApplicationContext()).build();
+        if(!tr.isOperational())
+            Log.e("ERROR", "Detector dependencies are not yet available");
+        else{
+            Frame frame =  new Frame.Builder().setBitmap(bitmap).build();
+            SparseArray<TextBlock> items = tr.detect(frame);
+
+            for(int i=0; i<items.size(); i++){
+                TextBlock item = items.valueAt(i);
+                String s = item.getValue();
+                str += s;
+            }
+        }
+        return str;
+    }
+
 
 }
