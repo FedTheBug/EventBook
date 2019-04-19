@@ -7,15 +7,22 @@
     tools:context=".EventsActivity"
     android:background="#409CB1">
 
-        <android.support.v7.widget.SearchView
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:queryHint="Search Here"
-            android:background="#ffffff">
-        </android.support.v7.widget.SearchView>
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="65dp"
+        android:background="#ffffff"
+        android:queryHint="Search Here">
+    </android.support.v7.widget.SearchView>
 
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSeachWithPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_camera"
+        android:layout_margin="16dp" />
+    
     <ListView
         android:id="@+id/listViewEvents"
         android:layout_width="match_parent"
