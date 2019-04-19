@@ -88,7 +88,7 @@ public class EventsActivity extends AppCompatActivity {
                 return false;
             }
         });
-        
+
     }
 
     // Fetch All Events From The Database and Add Them To The Array List
