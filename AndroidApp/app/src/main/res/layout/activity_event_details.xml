@@ -55,7 +55,7 @@
             android:textColor="#ffffff"/>
 
         <TextView
-            android:text="\nEvent Date::"
+            android:text="\nEvent Date:"
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
             android:textColor="#ffffff"/>
 
         <TextView
-            android:text="\nDescription::"
+            android:text="\nDescription:"
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
