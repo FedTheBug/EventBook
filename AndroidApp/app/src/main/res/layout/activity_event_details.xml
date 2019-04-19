@@ -1,9 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventDetailsActivity">
+    tools:context=".ProfileActivity"
+    android:background="#02223B" >
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imgPlaylistItemBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:maxHeight="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/logo1" />
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="\n\n\n\n\n\n\nEvent Name:"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#409CB1" />
+
+        <TextView
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:id="@+id/textViewEventName"
+            android:text="[name of the event]"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:text="\nVenue:"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#409CB1"/>
+
+        <TextView
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:id="@+id/textViewVenue"
+            android:text="[venue of the event]"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:text="\nEvent Date::"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#409CB1"/>
+
+        <TextView
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:id="@+id/textViewEventDate"
+            android:text="[date of the event]"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:text="\nRegistration Dealline:"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#409CB1"/>
+
+        <TextView
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:id="@+id/textViewRegDeadline"
+            android:text="[registration Deadline of event]"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:text="\nDescription::"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#409CB1"/>
+
+        <TextView
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:id="@+id/textViewDescription"
+            android:text="[description of the event]"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
