@@ -218,6 +218,47 @@ public class EventsActivity extends AppCompatActivity {
             Toast.makeText(this, "Not found!", Toast.LENGTH_SHORT).show();
         }
     }
-    
+
+    // Options For Image Search
+    private void selectImage() {
+        final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
+        AlertDialog.Builder builder = new AlertDialog.Builder(EventsActivity.this);
+
+        builder.setTitle("Search Events By Photo");
+
+        builder.setItems(options, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                if(options[item].equals("Take Photo")){
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        File photoFile = null;
+                        try {
+                            photoFile = createImageFile();
+                        } catch (IOException ex) {
+
+                        }
+                        if (photoFile != null) {
+                            Uri photoURI = FileProvider.getUriForFile(context,
+                                    "com.cse.android.fileprovider",
+                                    photoFile);
+                            intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                            startActivityForResult(intent, 1);
+                        }
+                    }
+                }
+                else if(options[item].equals("Choose from Gallery")) {
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select File"),2);
+                }
+                else if(options[item].equals("Cancel")) {
+                    dialog.dismiss();
+                }
+            }
+        });
+        builder.show();
+    }
 
 }
