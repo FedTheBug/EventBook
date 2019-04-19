@@ -170,5 +170,24 @@ public class EventsActivity extends AppCompatActivity {
         return str;
     }
 
+    // Searching Event Name From The Extracted Text From The Image
+    public void searchByPhoto(String string){
+        boolean flag = false;
+        for(int i=0; i<arrayList.size(); i++){
+            Event event = arrayList.get(i);
+
+            if(string.contains(event.getName())){
+                flag = true;
+                // Goes To Event Details Activity
+                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                // putting an object as an intent extra
+                intent.putExtra("Event",(Serializable) event);
+                startActivity(intent);
+            }
+        }
+        if(flag == false){
+            Toast.makeText(this, "Not found!", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
