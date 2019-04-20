@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Migration Class
+ * Adds Pictures to the Events in the Database
+ * 
+ */
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
