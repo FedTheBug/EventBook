@@ -1,4 +1,10 @@
 <?php
+/**
+ * 
+ * Migration class
+ * Creates users' table into the database
+ * 
+ */
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
