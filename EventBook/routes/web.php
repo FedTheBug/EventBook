@@ -11,25 +11,25 @@
 |
 */
 
-//to make a route to home
+# Pages Route
 Route::get('/', 'PagesController@index');
 
-//to make a route to about
+# Abouts Route
 Route::get('/about', 'PagesController@about');
 
-//to make a route to services
+# Services Route
 Route::get('/services', 'PagesController@services');
 
-//to make route to event class
+# Events Route
 Route::resource('events','EventsController');
 
-// to make route to auth
+# User Authentication Route
 Auth::routes();
 
-//route to home after logged in
+# Home Route
 Route::get('/home', 'HomeController@index');
 
 
-//route for FID
+# Socialite
 Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider1');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback1');
