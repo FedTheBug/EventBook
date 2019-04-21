@@ -18,4 +18,8 @@ class ExampleTest extends TestCase
         //$this->assertTrue(true);
         Event::user();
     }
+    public function testExample()
+    {
+        $this->assertTrue(true);
+    }
 }

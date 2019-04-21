@@ -1,4 +1,10 @@
 <?php
+/**
+ * 
+ * Model Class
+ * Social Identity Provider
+ * 
+ */
 
 namespace App;
 

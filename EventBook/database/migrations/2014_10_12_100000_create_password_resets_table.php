@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Migration Class
+ * Resets password table in the Database 
+ *
+ */
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;

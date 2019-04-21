@@ -16,6 +16,32 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertSee('Welcome to the homepage of EventBook');
     }
+
+    /**
+     * Test example for About
+     * 
+     * @return void
+     * 
+     */
+    public function testAbout()
+    {
+        $response = $this->get('/about');
+
+        $response->assertSee('About Page of EventBook');
+    }
+    /**
+     * Test example for Services
+     * 
+     * @return void
+     * 
+     */
+    public function testServices()
+    {
+        $response = $this->get('/services');
+
+        $response->assertSee('Services Page of EventBook');
+    }
+
 }
