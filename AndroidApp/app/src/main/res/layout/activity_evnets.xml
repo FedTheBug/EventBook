@@ -9,10 +9,11 @@
 
     <android.support.v7.widget.SearchView
         android:id="@+id/search"
-        android:layout_width="match_parent"
+        android:layout_width="316dp"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:queryHint="Search Here">
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:queryHint="Search Here"
+        app:queryHint="Search">
 
     </android.support.v7.widget.SearchView>
 
@@ -20,19 +21,25 @@
         android:id="@+id/SeachWithPhoto"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="555dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
         android:src="@drawable/ic_camera"
-        app:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+        app:backgroundTint="#ffffff"
+        app:fabSize="mini"
+        app:useCompatPadding="false"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ListView
         android:id="@+id/listViewEvents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:divider="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:divider="@color/common_google_signin_btn_text_dark_default"
+        android:dividerHeight="@dimen/activity_horizontal_margin"
         android:textColor="#409CB1"
         android:theme="@style/AlertDialog.AppCompat">
+
 
     </ListView>
 
