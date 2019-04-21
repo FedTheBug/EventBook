@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
-    android:background="#02223B" >
-
+    android:background="@color/colorPrimaryDark" >
+<!--
     <ImageView
         android:id="@+id/imgPlaylistItemBg"
         android:layout_width="match_parent"
@@ -16,32 +16,43 @@
         android:scaleType="fitStart"
         android:src="@drawable/logo1" />
 
+    -->
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/logored" />
+
     <LinearLayout
-        android:layout_centerVertical="true"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="\n\n\n\n\n\n\nEvent Name:"
+            android:text="Event Name:"
             android:textAlignment="textStart"
             android:textColor="#409CB1" />
 
         <TextView
             android:id="@+id/textViewEventName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:text="[name of the event]"
             android:textAlignment="textStart"
             android:textAppearance="@style/Base.TextAppearance.AppCompat"
-            android:textColor="#ffffff" />
+            android:textColor="#fff" />
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:text="\nVenue:"
@@ -49,17 +60,17 @@
             android:textColor="#409CB1" />
 
         <TextView
-            android:textAppearance="@style/Base.TextAppearance.AppCompat"
             android:id="@+id/textViewVenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:text="[venue of the event]"
             android:textAlignment="textStart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"/>
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+            android:textColor="#fff" />
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:text="\nEvent Date:"
@@ -67,17 +78,17 @@
             android:textColor="#409CB1" />
 
         <TextView
-            android:textAppearance="@style/Base.TextAppearance.AppCompat"
             android:id="@+id/textViewEventDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:text="[date of the event]"
             android:textAlignment="textStart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"/>
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+            android:textColor="#fff" />
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:text="\nRegistration Dealline:"
@@ -85,17 +96,17 @@
             android:textColor="#409CB1" />
 
         <TextView
-            android:textAppearance="@style/Base.TextAppearance.AppCompat"
             android:id="@+id/textViewRegDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:text="[registration Deadline of event]"
             android:textAlignment="textStart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"/>
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+            android:textColor="#fff" />
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:text="\nDescription:"
@@ -103,14 +114,14 @@
             android:textColor="#409CB1" />
 
         <TextView
-            android:textAppearance="@style/Base.TextAppearance.AppCompat"
             android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:text="[description of the event]"
             android:textAlignment="textStart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"/>
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+            android:textColor="#fff" />
 
     </LinearLayout>
 
