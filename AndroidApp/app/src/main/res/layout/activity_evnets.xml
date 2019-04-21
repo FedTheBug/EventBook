@@ -30,18 +30,21 @@
         app:useCompatPadding="false"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
+
+
     <ListView
         android:id="@+id/listViewEvents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:divider="@color/common_google_signin_btn_text_dark_default"
-        android:dividerHeight="@dimen/activity_horizontal_margin"
+        android:divider="#DCDCDC"
+        android:dividerHeight="3dp"
         android:textColor="#409CB1"
         android:theme="@style/AlertDialog.AppCompat">
 
-
     </ListView>
+
+
 
 </RelativeLayout>
 
