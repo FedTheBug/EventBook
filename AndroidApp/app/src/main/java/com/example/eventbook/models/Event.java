@@ -27,7 +27,7 @@ public class Event implements Serializable {
     private static Context mCtx;
 
     public Event(int id, String name, String venue, String event_date, String reg_deadline,
-                       String description, int organizer_id) {
+                 String description, int organizer_id) {
         this.id = id;
         this.name = name;
         this.venue = venue;
@@ -111,10 +111,10 @@ public class Event implements Serializable {
 
     @Override
     public String toString() {
-        return "Event Name: " + name + "\nEvent Date: " +
-                event_date;
+        return "Event Name: " + name + "\nEvent Date: " + event_date;
     }
 
+}
 
 /*
     @Override
@@ -124,4 +124,3 @@ public class Event implements Serializable {
     }
 
     */
-}
