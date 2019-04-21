@@ -9,10 +9,9 @@
 
     <android.support.v7.widget.SearchView
         android:id="@+id/search"
-        android:layout_width="300dp"
-        android:layout_height="59dp"
-        android:layout_marginRight="65dp"
-        android:background="#409CB1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
         android:queryHint="Search Here">
 
     </android.support.v7.widget.SearchView>
@@ -22,7 +21,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="555dp"
         android:src="@drawable/ic_camera"
         app:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
