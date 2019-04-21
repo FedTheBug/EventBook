@@ -111,7 +111,7 @@ public class Event implements Serializable {
 
     @Override
     public String toString() {
-        return "Name: " + name + "\nEvent Date: " +
+        return "Event Name: " + name + "\nEvent Date: " +
                 event_date;
     }
 
