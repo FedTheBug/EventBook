@@ -17,6 +17,8 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -310,5 +312,41 @@ public class EventsActivity extends AppCompatActivity {
         }
         mCurrentPhotoPath = image.getAbsolutePath();
         return image;
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+
+            // Action After Logout
+            case R.id.menuLogout:
+                SharedPrefManager.getInstance(this).logout();
+                finish();
+                startActivity(new Intent(this, MainActivity.class));
+                break;
+
+            // Action on Click Settings
+            case R.id.menuSettings:
+                Toast.makeText(this, "You clicked settings", Toast.LENGTH_LONG).show();
+                break;
+
+            // Action on Click Events
+            case R.id.menuEvents:
+                startActivity(new Intent(this, EventsActivity.class));
+                break;
+
+            // Action on Click Dashboard
+            case R.id.menuDashboard:
+                startActivity(new Intent(this, ProfileActivity.class));
+                break;
+        }
+        return true;
     }
 }
