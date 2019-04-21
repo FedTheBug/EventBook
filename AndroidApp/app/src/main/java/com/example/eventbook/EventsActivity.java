@@ -72,7 +72,6 @@ public class EventsActivity extends AppCompatActivity {
 
         fetchAllEvents();
 
-
         adapter = new ArrayAdapter<Event>(EventsActivity.this, android.R.layout.	simple_expandable_list_item_1, arrayList);
         listViewEvents.setAdapter(adapter);
 
