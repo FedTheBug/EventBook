@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EventsActivity"
-    android:background="#409CB1">
+    android:background="#FFFFFF">
 
     <android.support.v7.widget.SearchView
         android:id="@+id/search"
@@ -23,14 +23,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
         android:layout_marginTop="5dp"
-        android:src="@drawable/ic_camera" />
+        android:src="@drawable/ic_camera"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
     <ListView
         android:id="@+id/listViewEvents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:textColor="#409CB1">
+        android:divider="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:textColor="#409CB1"
+        android:theme="@style/AlertDialog.AppCompat">
 
     </ListView>
 
