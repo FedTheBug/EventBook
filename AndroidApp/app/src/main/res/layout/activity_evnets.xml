@@ -31,7 +31,6 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 
-
     <ListView
         android:id="@+id/listViewEvents"
         android:layout_width="match_parent"
@@ -40,10 +39,10 @@
         android:divider="#DCDCDC"
         android:dividerHeight="3dp"
         android:textColor="#409CB1"
-        android:theme="@style/AlertDialog.AppCompat">
+        android:theme="@style/AlertDialog.AppCompat"
+        >
 
     </ListView>
-
 
 
 </RelativeLayout>

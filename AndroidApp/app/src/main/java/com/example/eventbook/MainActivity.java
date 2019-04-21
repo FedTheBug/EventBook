@@ -28,7 +28,7 @@ import android.util.Log;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-//import butterknife.InjectView;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
