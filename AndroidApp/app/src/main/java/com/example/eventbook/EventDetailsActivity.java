@@ -42,10 +42,6 @@ public class EventDetailsActivity extends AppCompatActivity {
         textViewDescription.setText(description);
 
 
-
-
-
-
     }
 
 }
