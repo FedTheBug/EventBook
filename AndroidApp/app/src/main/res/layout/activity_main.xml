@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/blur"
 
     >
 
@@ -81,7 +81,7 @@
             android:layout_marginBottom="24dp"
             android:padding="12dp"
             android:text="Create Account"
-            android:background="#CC1D1D"
+            android:background="#7d0553"
             android:textColor="#ffffff"/>
 
         <TextView android:id="@+id/link_login"
