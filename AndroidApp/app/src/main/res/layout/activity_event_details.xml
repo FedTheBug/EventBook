@@ -24,7 +24,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="24dp"
-        android:src="@drawable/logored" />
+        android:src="@drawable/logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
