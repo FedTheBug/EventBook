@@ -1,3 +1,5 @@
+![WordPress Plugin Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/bbpress)
+
 #CSE327.Project.Team05
 
 EventBook
