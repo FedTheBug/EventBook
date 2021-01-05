@@ -1,4 +1,4 @@
-![WordPress Plugin Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/bbpress)
+![PowerShell Gallery](https://img.shields.io/powershellgallery/p/DNS.1.1.1.1) ![WordPress Plugin Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/bbpress)
 
 #CSE327.Project.Team05
 
